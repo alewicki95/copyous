@@ -1,0 +1,41 @@
+// Edit dialog
+.clipboard-item-edit-dialog {
+	width: 35em;
+
+	.clipboard-item-edit-dialog-entry {
+		@extend %entry;
+		height: 16em;
+
+		&.monospace {
+			@extend %monospace;
+			@include fontsize(9pt);
+		}
+
+		.multiline-scrollview {
+			.multiline-box {
+				padding-right: $base_padding;
+
+				StEntry {
+					@extend %reset;
+				}
+			}
+		}
+	}
+
+	.language-button {
+		@extend %dialog_button;
+	}
+}
+
+// Language button popupmenu
+.scrollable-popup-menu-section {
+	max-height: 500px;
+
+	.popup-menu-section {
+		margin-right: $base_padding + 7px;
+	}
+
+	StScrollBar {
+		padding: $base_padding 0;
+	}
+}

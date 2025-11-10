@@ -1,0 +1,93 @@
+.clipboard-dialog {
+	background-color: $bg_color;
+	border-radius: $alert_radius;
+	border: 1px solid $outer_borders_color;
+	box-shadow: 0 2px 4px 0 $shadow_color;
+	padding: 0;
+
+	.dialog-header {
+		.dialog-header-box {
+			padding: $base_padding * 2.5;
+			padding-bottom: 0;
+		}
+	}
+
+	.clipboard-item-list {
+		spacing: $base_padding * 2;
+	}
+
+	// Horizontal layout
+	&.horizontal {
+		.clipboard-item-list {
+			margin: $base_padding * 2.5 0;
+
+			.clipboard-item:first-child {
+				margin-left: $base_padding * 2.5;
+
+				&:rtl {
+					margin-left: 0;
+					margin-right: $base_padding * 2.5;
+				}
+			}
+
+			.clipboard-item:last-child {
+				margin-right: $base_padding * 2.5;
+
+				&:rtl {
+					margin-right: 0;
+					margin-left: $base_padding * 2.5;
+				}
+			}
+
+			// Fill full width
+			.status-item {
+				width: auto !important;
+			}
+		}
+
+		StScrollBar {
+			padding: $base_padding * 0.5 $base_padding * 3;
+		}
+	}
+
+	// Vertical layout
+	&.vertical {
+		.clipboard-item-list {
+			margin: 0 $base_padding * 2.5;
+
+			.clipboard-item:first-child {
+				margin-top: $base_padding * 2.5;
+			}
+
+			.clipboard-item:last-child {
+				margin-bottom: $base_padding * 2.5;
+			}
+
+			// Fill full height
+			.status-item {
+				height: auto !important;
+			}
+		}
+
+		StScrollBar {
+			padding: $base_padding * 3 $base_padding * 0.5;
+		}
+	}
+
+	// Vertical layout with header/search shown
+	&.vertical.show-header {
+		.dialog-header {
+			margin-bottom: $base_padding * 2.5;
+		}
+
+		.clipboard-item-list {
+			.clipboard-item:first-child {
+				margin-top: 0;
+			}
+		}
+
+		StScrollBar {
+			padding-top: $base_padding * 0.5;
+		}
+	}
+}

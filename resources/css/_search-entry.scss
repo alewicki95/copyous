@@ -1,0 +1,100 @@
+@use 'sass:color';
+
+@mixin item_button_color($color) {
+	color: $color;
+
+	&:focus {
+		@include focus_ring($fc: color.adjust($color, $alpha: -0.5));
+	}
+
+	&:hover .search-entry-icon {
+		icon-shadow: 0 0 2px $text_shadow_color;
+	}
+}
+
+.clipboard-dialog {
+	// Search entry
+	.search-entry {
+		width: auto;
+		margin: 0;
+		padding: $base_padding - 2px;
+		max-width: 24em;
+
+		StLabel {
+			padding: 0;
+		}
+
+		// prettier-ignore
+		@if $variant == 'light' {
+			border: 1px solid $card_shadow_border_color;
+			box-shadow: 0 1px 2px 0 $card_shadow_color;
+
+			@include button(normal, $style: card);
+			&:hover { @include button(hover, $style: card);}
+			&:focus { @include button(focus, $style: card);}
+			&:insensitive { @include button(insensitive, $style: card);}
+
+			StLabel.hint-text { color: color.adjust($fg_color, $alpha:-0.3); }
+		}
+
+		.search-entry-button {
+			@extend %notification_button;
+
+			background-color: transparent;
+			margin: 0;
+			padding: 0;
+			border-radius: $forced_circular_radius;
+
+			&.item-button {
+				padding: $base_padding * 0.5 + 1px;
+
+				// prettier-ignore
+				& {
+					&.blue { @include item_button_color($tag_color_blue); }
+					&.teal { @include item_button_color($tag_color_teal); }
+					&.green { @include item_button_color($tag_color_green); }
+					&.yellow { @include item_button_color($tag_color_yellow); }
+					&.orange { @include item_button_color($tag_color_orange); }
+					&.red { @include item_button_color($tag_color_red); }
+					&.pink { @include item_button_color($tag_color_pink); }
+					&.purple { @include item_button_color($tag_color_purple); }
+					&.slate { @include item_button_color($tag_color_slate); }
+				}
+
+				.search-entry-icon {
+					icon-size: $scalable_icon_size;
+					padding-bottom: 2px;
+				}
+
+				.arrow-icon {
+					icon-size: $scalable_icon_size * 0.6;
+					margin-right: 2px;
+				}
+			}
+
+			&.pin-button {
+				padding: $base_padding * 0.5 + 1px;
+
+				.pin-button-content {
+					width: $scalable_icon_size;
+					height: $scalable_icon_size;
+					padding: $scalable_icon_size * 0.1;
+
+					.search-entry-icon {
+						margin: 0;
+						padding: $scalable_icon_size * 0.1;
+						icon-size: $scalable_icon_size;
+					}
+				}
+
+				// prettier-ignore
+				&:checked:checked {
+					@include button(normal, $c: -st-accent-color, $tc: -st-accent-fg-color, $style: default);
+					&:focus { @include button(focus, $c: -st-accent-color, $tc: -st-accent-fg-color, $style: default); }
+					&:hover { @include button(hover, $c: -st-accent-color, $tc: -st-accent-fg-color, $style: default); }
+					&:active { @include button(active, $c: -st-accent-color, $tc: -st-accent-fg-color, $style: default); }
+				}
+			}
+		}
+	}
+}

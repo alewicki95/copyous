@@ -1,0 +1,10 @@
+.vscode/*
+!.vscode/extensions.json
+!.vscode/gnome-css.json
+!.vscode/settings.json
+
+.env
+.idea
+
+dist
+node_modules
