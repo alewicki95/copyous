@@ -68,11 +68,11 @@ jobs:
 
       - name: Update POT
         if: env.PO_CHANGED
-        run: make pot
+        run: make pot -B
 
       - name: Update PO
         if: env.PO_CHANGED
-        run: make po
+        run: make po -B
 
       - uses: stefanzweifel/git-auto-commit-action@v7
         if: env.PO_CHANGED

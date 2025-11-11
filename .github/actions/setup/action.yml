@@ -36,6 +36,7 @@ runs:
       working-directory: ./submodules/gnome-shell/subprojects/extensions-tool
       run: |
         ./generate-translations.sh
-        meson setup --prefix=/usr --buildtype=release -Dman=false build
+        meson setup --prefix=$HOME/.local --buildtype=release -Dman=false build
         meson compile -C build
         meson install -C build
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
