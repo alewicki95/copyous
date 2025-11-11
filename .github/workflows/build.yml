@@ -65,7 +65,9 @@ jobs:
       - name: Update POT
         run: |
           make pot
-          if git show HEAD:resources/po/main.pot | diff -q -I '^"POT-Creation-Date": .*' - resources/po/main.pot; then
+          if diff -q \
+              <(git show HEAD:resources/po/main.pot | grep -v '^"POT-Creation-Date":') \
+              <(grep -v '^"POT-Creation-Date":' resources/po/main.pot); then
             echo "POT_CHANGED=false" >> $GITHUB_ENV
           else
             echo "POT_CHANGED=true" >> $GITHUB_ENV

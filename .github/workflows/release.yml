@@ -36,12 +36,12 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: dist/${{ env.UUID }}.zip
-          prerelease: ${{ env.PRERELEASE }}
+          prerelease: ${{ env.PRERELEASE == 'true' }}
           fail_on_unmatched_files: true
           generate_release_notes: true
 
       - name: Publish Release
-        if: ${{ !env.PRERELEASE }}
+        if: ${{ env.PRERELEASE == 'false' }}
         run: gnome-extensions upload -u "$GNOME_USER" -p "$GNOME_PASSWORD" --accept-tos dist/${{ env.UUID }}.zip
         env:
           GNOME_USER: ${{ secrets.GNOME_USER }}
