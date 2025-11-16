@@ -67,14 +67,11 @@ jobs:
 
       - name: Update POT
         if: env.PO_CHANGED == 'true'
-        run: |
-          BEFORE=$(cat resources/po/main.pot)
-          make pot
-          diff <(echo "$BEFORE") resources/po/main.pot
+        run: make pot -B
 
       - name: Update PO
         if: env.PO_CHANGED == 'true'
-        run: make po
+        run: make po -B
 
       - uses: stefanzweifel/git-auto-commit-action@v7
         if: env.PO_CHANGED == 'true'
