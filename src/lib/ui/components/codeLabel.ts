@@ -288,9 +288,7 @@ export class CodeLabel extends St.Label {
 		this._colorSchemeChangedId = this.settings.connect('notify::color-scheme', this.updateText.bind(this));
 
 		// Update text after hljs is loaded
-		if (this.ext.hljs === undefined) {
-			this.ext.connectHljsInit(this.updateText.bind(this));
-		}
+		this.ext.connectHljsInit(this.updateText.bind(this));
 
 		this.updateText();
 	}

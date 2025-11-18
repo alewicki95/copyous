@@ -11,6 +11,7 @@ export default [
 					// Mute eslint-disable-next-line comments
 					'no-unsafe-assignment': { create: () => ({}) },
 					'no-unsafe-call': { create: () => ({}) },
+					'no-await-in-loop': { create: () => ({}) },
 				},
 			},
 		},

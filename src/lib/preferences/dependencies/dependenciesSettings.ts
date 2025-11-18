@@ -6,8 +6,9 @@ import Gtk from 'gi://Gtk';
 
 import { ExtensionPreferences, gettext as _ } from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
+import type { HLJSApi } from 'highlight.js';
+
 import { getHljsLanguages, getHljsPath } from '../../common/constants.js';
-import { reloadExtension } from '../../common/dbus.js';
 import { registerClass } from '../../common/gjs.js';
 import { Icon } from '../../common/icons.js';
 import { downloadHljsLanguage } from './dependencies.js';
@@ -142,6 +143,7 @@ class LanguageWidget extends Gtk.ListBox {
 	private readonly _spinner: Adw.Spinner;
 
 	constructor(
+		private prefs: ExtensionPreferences,
 		private language: Language,
 		private window: Adw.PreferencesWindow,
 	) {
@@ -154,7 +156,7 @@ class LanguageWidget extends Gtk.ListBox {
 
 		const row = new Adw.ActionRow({
 			title: language.language,
-			activatable: true,
+			activatable: !language.isDefault,
 		});
 		row.connect('activated', this.onActivate.bind(this));
 		this.append(row);
@@ -214,6 +216,7 @@ class LanguageWidget extends Gtk.ListBox {
 		if (!this.language.installed) {
 			// Install
 			const success = await downloadHljsLanguage(
+				this.prefs,
 				this.language.languageName,
 				this.language.hash,
 				this.language.file,
@@ -283,14 +286,6 @@ class HighlightJsPage extends Adw.NavigationPage {
 		this._page = new Adw.PreferencesPage();
 		toolbarView.content = this._page;
 
-		const banner = new Adw.Banner({
-			title: _('Reload extension to apply language changes.'),
-			button_label: _('Reload Extension'),
-			button_style: Adw.BannerButtonStyle.SUGGESTED,
-		});
-		banner.connect('button-clicked', this.reloadExtension.bind(this));
-		this._page.set_banner(banner);
-
 		const languagesGroup = new Adw.PreferencesGroup({
 			title: _('Languages'),
 		});
@@ -330,8 +325,7 @@ class HighlightJsPage extends Adw.NavigationPage {
 	private async initLanguages() {
 		let defaultLanguages: string[] = [];
 		try {
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-			const hljs: typeof import('highlight.js') = await import(getHljsPath(this.prefs).get_uri());
+			const hljs = (await import(getHljsPath(this.prefs).get_uri())) as { default: HLJSApi };
 			defaultLanguages = hljs.default.listLanguages();
 		} catch {
 			// Ignore
@@ -347,31 +341,9 @@ class HighlightJsPage extends Adw.NavigationPage {
 		const filterListModel = new Gtk.FilterListModel<Language>({ model: listModel, filter: this._filter });
 
 		this._list.bind_model(filterListModel, (language) => {
-			const widget = new LanguageWidget(language, this.window);
-			widget.connect('changed', () => (this._page.banner.revealed = true));
-
+			const widget = new LanguageWidget(this.prefs, language, this.window);
 			return new Gtk.FlowBoxChild({ child: widget, focusable: false });
 		});
-	}
-
-	private async reloadExtension() {
-		const success = await reloadExtension(this.prefs);
-		if (success) {
-			this._page.banner.revealed = false;
-			this.window.add_toast(
-				new Adw.Toast({
-					title: _('Successfully reloaded extension'),
-					priority: Adw.ToastPriority.HIGH,
-				}),
-			);
-		} else {
-			this.window.add_toast(
-				new Adw.Toast({
-					title: _('Failed to reload extension'),
-					priority: Adw.ToastPriority.HIGH,
-				}),
-			);
-		}
 	}
 }
 

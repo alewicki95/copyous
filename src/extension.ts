@@ -3,10 +3,10 @@ import Gio from 'gi://Gio';
 
 import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
 
-import type HLJSApi from 'highlight.js';
+import type { HLJSApi } from 'highlight.js';
 import type { LanguageFn } from 'highlight.js';
 
-import { ClipboardHistory, getHljsLanguages, getHljsPath } from './lib/common/constants.js';
+import { ClipboardHistory, getDataPath, getHljsLanguages, getHljsPath } from './lib/common/constants.js';
 import { DbusService } from './lib/common/dbus.js';
 import { SoundManager, tryCreateSoundManager } from './lib/common/sound.js';
 import { ClipboardManager } from './lib/misc/clipboard.js';
@@ -17,7 +17,9 @@ import { ClipboardDialog } from './lib/ui/clipboardDialog.js';
 import { ClipboardIndicator } from './lib/ui/indicator.js';
 
 export default class CopyousExtension extends Extension {
-	public hljs: typeof HLJSApi | null | undefined;
+	public hljs: HLJSApi | null | undefined;
+	private hljsMonitor: Gio.FileMonitor | undefined;
+	private hljsLanguages: Map<string, boolean> | undefined;
 	private hljsCallbacks: (() => void)[] | undefined;
 
 	private clipboardDialog: ClipboardDialog | undefined;
@@ -116,36 +118,82 @@ export default class CopyousExtension extends Extension {
 	}
 
 	private async initHljs() {
+		if (this.hljs) return;
+
+		const hljsPath = getHljsPath(this);
 		try {
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-			const hljs: typeof import('highlight.js') = await import(getHljsPath(this).get_uri());
+			const hljs = (await import(hljsPath.get_uri())) as { default: HLJSApi };
 			this.hljs = hljs.default;
 
-			// Initialize extra languages
-			const languages = getHljsLanguages(this);
-			await Promise.all(
-				languages.map(async ([name, _language, _hash, path]) => {
-					if (!path.query_exists(null)) return;
+			// Disable file monitor
+			this.hljsMonitor?.cancel();
+			this.hljsMonitor = undefined;
 
-					try {
-						// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-						const language: { default: LanguageFn } = await import(path.get_uri());
-						this.hljs?.registerLanguage(name, language.default);
-					} catch {
-						this.getLogger().error(`Failed to register language "${name}"`);
-					}
-				}),
-			);
+			// Initialize extra languages
+			await this.loadHljsLanguages();
+
+			// Notify dependents
+			this.hljsCallbacks?.forEach((fn) => fn());
+			this.hljsCallbacks = undefined;
 		} catch {
 			this.hljs = null;
+
+			// Automatically load highlight.js
+			if (!this.hljsMonitor) {
+				this.hljsMonitor = hljsPath.monitor(Gio.FileMonitorFlags.NONE, null);
+				this.hljsMonitor.connect('changed', async (_monitor, _file, _otherFile, eventType) => {
+					if (eventType === Gio.FileMonitorEvent.CHANGES_DONE_HINT) {
+						await this.initHljs();
+					}
+				});
+			}
+		}
+	}
+
+	private async loadHljsLanguages() {
+		this.hljsLanguages ??= new Map<string, boolean>();
+
+		if (!this.hljsMonitor) {
+			const path = getDataPath(this).get_child('languages');
+			this.hljsMonitor = path.monitor_directory(Gio.FileMonitorFlags.NONE, null);
+			this.hljsMonitor.connect('changed', async (_monitor, _file, _otherFile, eventType) => {
+				if (
+					eventType === Gio.FileMonitorEvent.CHANGES_DONE_HINT ||
+					eventType === Gio.FileMonitorEvent.DELETED
+				) {
+					await this.loadHljsLanguages();
+				}
+			});
 		}
 
-		this.hljsCallbacks?.forEach((fn) => fn());
-		this.hljsCallbacks = undefined;
+		const languages = getHljsLanguages(this);
+		await Promise.all(
+			languages.map(async ([name, _language, _hash, path]) => {
+				const enabled = this.hljsLanguages?.get(name) ?? false;
+
+				if (!path.query_exists(null)) {
+					if (enabled) {
+						this.hljs?.unregisterLanguage(name);
+						this.hljsLanguages?.set(name, false);
+					}
+					return;
+				}
+
+				if (enabled) return;
+
+				try {
+					const language = (await import(path.get_uri())) as { default: LanguageFn };
+					this.hljs?.registerLanguage(name, language.default);
+					this.hljsLanguages?.set(name, true);
+				} catch {
+					this.getLogger().error(`Failed to register language "${name}"`);
+				}
+			}),
+		);
 	}
 
 	public connectHljsInit(fn: () => void) {
-		if (this.hljs !== undefined) return;
+		if (this.hljs != null) return;
 
 		this.hljsCallbacks ??= [];
 		this.hljsCallbacks.push(fn);
@@ -184,6 +232,9 @@ export default class CopyousExtension extends Extension {
 	override disable() {
 		// Highlight.js
 		this.hljs = undefined;
+		this.hljsMonitor?.cancel();
+		this.hljsMonitor = undefined;
+		this.hljsLanguages = undefined;
 		this.hljsCallbacks = undefined;
 
 		// UI

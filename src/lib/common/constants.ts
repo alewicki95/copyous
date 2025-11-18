@@ -72,9 +72,15 @@ export const ClipboardHistory = {
 
 export type ClipboardHistory = (typeof ClipboardHistory)[keyof typeof ClipboardHistory];
 
-export const UserAgent = 'Mozilla/5.0 (compatible; CopyousBot/1.0; +https://github.com/boerdereinar)';
+export const UserAgent = 'Mozilla/5.0 (compatible; CopyousBot/1.0; +https://github.com/boerdereinar/copyous)';
 
-export const HljsUrl = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/es/highlight.min.js';
+export const HljsCdns = [
+	'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/es',
+	'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/es',
+	'https://unpkg.com/@highlightjs/cdn-assets@11.11.1/es',
+];
+
+export const HljsUrls = HljsCdns.map((cdn) => `${cdn}/highlight.min.js`);
 
 export const HljsSha512 =
 	'f35f24636b981f53d194735964bd7b8606c79e0f4b04e800e24f13415b1761368ac20839a4cc416a1c5e1c351d00c4cf509f360972d098964e97739050a675f1';
@@ -305,6 +311,6 @@ export function getHljsLanguages(ext: Extension | ExtensionPreferences): [string
 	return HljsLanguages.map(([language, name, hash]) => [language, name, hash, path.get_child(`${language}.min.js`)]);
 }
 
-export function getHljsLanguageUrl(language: string): string {
-	return `https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/es/languages/${language}.min.js`;
+export function getHljsLanguageUrls(language: string): string[] {
+	return HljsCdns.map((cdn) => `${cdn}/languages/${language}.min.js`);
 }
