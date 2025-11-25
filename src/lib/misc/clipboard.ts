@@ -184,7 +184,10 @@ export class ClipboardManager extends GObject.Object {
 					const mimetype = Gio.content_type_get_mime_type(contentType);
 					if (!mimetype) break;
 
-					return this.pasteContent({ type: ContentType.Image, mimetype, data: contents, checksum: '' });
+					const checksum = GLib.compute_checksum_for_bytes(GLib.ChecksumType.MD5, contents);
+					if (!checksum) return;
+
+					return this.pasteContent({ type: ContentType.Image, mimetype, data: contents, checksum });
 				} catch {
 					break;
 				}
