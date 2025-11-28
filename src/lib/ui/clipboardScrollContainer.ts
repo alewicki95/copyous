@@ -156,6 +156,15 @@ export class ClipboardScrollContainer extends St.BoxLayout {
 		this.updateVisible();
 	}
 
+	public clearItems(): void {
+		for (const child of this.get_children()) {
+			if (child instanceof ClipboardItem) {
+				this.remove_child(child);
+			}
+		}
+		this.updateVisible();
+	}
+
 	public removeItem(child: ClipboardItem): void {
 		if (child.get_parent() !== this) return;
 
