@@ -18,7 +18,7 @@ Gio._promisify(Gio.MemoryOutputStream.prototype, 'splice_async');
 Gio._promisify(Meta.SelectionSource.prototype, 'read_async');
 
 const MimeTypes = {
-	Text: ['text/plain', 'text/plain;charset=utf-8', 'STRING', 'UTF8_STRING'],
+	Text: ['text/plain;charset=utf-8', 'UTF8_STRING', 'text/plain', 'STRING'],
 	Image: ['image/png', 'image/jxl', 'image/webp', 'image/avif', 'image/jpeg'],
 	File: ['x-special-gnome-copied-files', 'text/uri-list'],
 	Sensitive: ['x-kde-passwordManagerHint'],
@@ -134,15 +134,15 @@ export class ClipboardManager extends GObject.Object {
 			if (this.keyboard.purpose === Clutter.InputContentPurpose.TERMINAL) {
 				this.keyboard.press(Clutter.KEY_Control_L);
 				this.keyboard.press(Clutter.KEY_Shift_L);
-				this.keyboard.press(Clutter.KEY_V);
-				this.keyboard.release(Clutter.KEY_V);
+				this.keyboard.press(Clutter.KEY_Insert);
+				this.keyboard.release(Clutter.KEY_Insert);
 				this.keyboard.release(Clutter.KEY_Shift_L);
 				this.keyboard.release(Clutter.KEY_Control_L);
 			} else {
-				this.keyboard.press(Clutter.KEY_Control_L);
-				this.keyboard.press(Clutter.KEY_v);
-				this.keyboard.release(Clutter.KEY_v);
-				this.keyboard.release(Clutter.KEY_Control_L);
+				this.keyboard.press(Clutter.KEY_Shift_L);
+				this.keyboard.press(Clutter.KEY_Insert);
+				this.keyboard.release(Clutter.KEY_Insert);
+				this.keyboard.release(Clutter.KEY_Shift_L);
 			}
 
 			this.pasteSignalId = -1;
