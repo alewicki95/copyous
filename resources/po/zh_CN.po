@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-16 00:27+0000\n"
+"POT-Creation-Date: 2026-03-23 23:25+0000\n"
 "PO-Revision-Date: 2025-12-19 18:30+0800\n"
 "Last-Translator: everyx <lunt.luo@gmail.com>\n"
 "Language-Team: Chinese (China)\n"
@@ -108,8 +108,8 @@ msgstr "颜色(_R)"
 msgid "Type to search"
 msgstr "输入以搜索"
 
-#: src/lib/ui/components/editDialog.ts:231
-#: src/lib/ui/components/editDialog.ts:258
+#: src/lib/ui/components/editDialog.ts:217
+#: src/lib/ui/components/editDialog.ts:244
 #: src/lib/preferences/actions/actionDefaults.ts:72
 #: src/lib/preferences/shortcuts/itemShortcuts.ts:38
 #: src/lib/preferences/general/feedbackSettings.ts:155
@@ -118,11 +118,11 @@ msgstr "输入以搜索"
 msgid "None"
 msgstr "无"
 
-#: src/lib/ui/components/editDialog.ts:283
+#: src/lib/ui/components/editDialog.ts:269
 msgid "Edit Clipboard Item"
 msgstr "编辑剪贴板项目"
 
-#: src/lib/ui/components/editDialog.ts:310 src/lib/ui/indicator.ts:45
+#: src/lib/ui/components/editDialog.ts:306 src/lib/ui/indicator.ts:45
 #: src/lib/preferences/actions/actionsPage.ts:27
 #: src/lib/preferences/actions/actionsPage.ts:40
 #: src/lib/preferences/actions/actionSubMenuDialog.ts:34
@@ -130,12 +130,12 @@ msgstr "编辑剪贴板项目"
 #: src/lib/preferences/actions/actionDialog.ts:234
 #: src/lib/preferences/shortcuts/shortcutRow.ts:131
 #: src/lib/preferences/general/appExclusionSettings.ts:169
-#: src/lib/preferences/dependencies/dependencies.ts:203
+#: src/lib/preferences/dependencies/dependencies.ts:222
 #: src/lib/preferences/customization/items/exclusions.ts:90
 msgid "Cancel"
 msgstr "取消"
 
-#: src/lib/ui/components/editDialog.ts:317
+#: src/lib/ui/components/editDialog.ts:313
 #: src/lib/preferences/actions/actionDialog.ts:662
 msgid "Save"
 msgstr "保存"
@@ -199,7 +199,8 @@ msgid "Edit"
 msgstr "编辑"
 
 #: src/lib/ui/clipboardDialog.ts:137 src/lib/ui/clipboardDialog.ts:242
-#: src/lib/ui/indicator.ts:52 src/lib/preferences/general/historySettings.ts:64
+#: src/lib/ui/indicator.ts:52
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Clear"
 msgstr "清除"
 
@@ -317,22 +318,6 @@ msgstr "设置"
 msgid "%d File"
 msgid_plural "%d Files"
 msgstr[0] "%d 个文件"
-
-#: src/lib/misc/db.ts:134
-msgid "Failed to load Gda"
-msgstr "加载 Gda 失败"
-
-#: src/lib/misc/db.ts:135 src/lib/misc/db.ts:160
-msgid "Clipboard history will be disabled"
-msgstr "剪贴板历史将被禁用"
-
-#: src/lib/misc/db.ts:136
-msgid "Disable Warning"
-msgstr "禁用警告"
-
-#: src/lib/misc/db.ts:159
-msgid "Failed to load database"
-msgstr "加载数据库失败"
 
 #: src/lib/misc/notifications.ts:63 src/lib/misc/notifications.ts:114
 msgid "Copied Text"
@@ -799,53 +784,69 @@ msgstr "管理排除的应用"
 msgid "Manage apps that will be excluded from clipboard history"
 msgstr "管理将被排除，不记录剪贴板历史的应用"
 
-#: src/lib/preferences/general/historySettings.ts:38
+#: src/lib/preferences/general/historySettings.ts:63
 msgid "History"
 msgstr "历史"
 
-#: src/lib/preferences/general/historySettings.ts:44
-msgid "Use In-Memory Database"
-msgstr "使用内存数据库"
+#: src/lib/preferences/general/historySettings.ts:69
+msgid "Memory"
+msgstr ""
 
-#: src/lib/preferences/general/historySettings.ts:45
-msgid "Store clipboard history in memory instead of on disk"
-msgstr "将剪贴板历史记录存储在内存而非磁盘中"
+#: src/lib/preferences/general/historySettings.ts:70
+msgid "SQLite"
+msgstr ""
 
-#: src/lib/preferences/general/historySettings.ts:52
+#: src/lib/preferences/general/historySettings.ts:70
+msgid "(recommended)"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:71
+msgid "JSON"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:98
+msgid "Database"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:99
+msgid "Select which database type to use for storing your clipboard"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:124
 msgid "Database Location"
 msgstr "数据库位置"
 
-#: src/lib/preferences/general/historySettings.ts:60
+#: src/lib/preferences/general/historySettings.ts:132
 msgid "Clipboard History"
 msgstr "剪贴板历史"
 
-#: src/lib/preferences/general/historySettings.ts:62
+#: src/lib/preferences/general/historySettings.ts:134
 msgid ""
 "Choose what to do with your clipboard history when you restart, log out, or "
 "shut down your system"
 msgstr "选择系统重启、注销或关机时对剪贴板历史记录的操作"
 
-#: src/lib/preferences/general/historySettings.ts:64
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Keep Pinned/Tagged"
 msgstr "保留已固定/有标签项"
 
-#: src/lib/preferences/general/historySettings.ts:64
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Keep All"
 msgstr "保留全部"
 
-#: src/lib/preferences/general/historySettings.ts:70
+#: src/lib/preferences/general/historySettings.ts:142
 msgid "History Length"
 msgstr "历史记录长度"
 
-#: src/lib/preferences/general/historySettings.ts:71
+#: src/lib/preferences/general/historySettings.ts:143
 msgid "Select how many items to keep in the clipboard history"
 msgstr "选择剪贴板历史记录的保留条数"
 
-#: src/lib/preferences/general/historySettings.ts:77
+#: src/lib/preferences/general/historySettings.ts:149
 msgid "History Time Limit"
 msgstr "历史记录时长限制"
 
-#: src/lib/preferences/general/historySettings.ts:79
+#: src/lib/preferences/general/historySettings.ts:151
 msgid ""
 "Select how many minutes to keep items in the clipboard history. Set to 0 to "
 "disable the time limit"
@@ -1025,43 +1026,11 @@ msgid "Sound to play when a clipboard item is copied"
 msgstr "复制剪贴板项时播放的声音"
 
 #: src/lib/preferences/dependencies/dependencies.ts:151
-#: src/lib/preferences/dependencies/dependencies.ts:433
-msgid "Highlight.js Not Installed"
-msgstr "Highlight.js 未安装"
-
-#: src/lib/preferences/dependencies/dependencies.ts:152
-msgid "Highlight.js is required to display syntax highlighted code."
-msgstr "需要 Highlight.js 来显示代码语法高亮。"
-
-#: src/lib/preferences/dependencies/dependencies.ts:156
-msgid "Manual Installation"
-msgstr "手动安装"
-
-#: src/lib/preferences/dependencies/dependencies.ts:170
-msgid ""
-"You can manually install highlight.js by downloading highlight.min.js from "
-"\"Url\" to \"Install Location\"."
-msgstr ""
-"您可以从“网址”下载 highlight.min.js 到“安装位置”来手动安装 highlight.js。"
-
-#: src/lib/preferences/dependencies/dependencies.ts:187
-msgid "Url"
-msgstr "网址"
-
-#: src/lib/preferences/dependencies/dependencies.ts:196
-msgid "Install Location"
-msgstr "安装位置"
-
-#: src/lib/preferences/dependencies/dependencies.ts:205
-msgid "Install"
-msgstr "安装"
-
-#: src/lib/preferences/dependencies/dependencies.ts:332
-#: src/lib/preferences/dependencies/dependencies.ts:431
+#: src/lib/preferences/dependencies/dependencies.ts:438
 msgid "Libgda Not Installed"
 msgstr "Libgda 未安装"
 
-#: src/lib/preferences/dependencies/dependencies.ts:334
+#: src/lib/preferences/dependencies/dependencies.ts:153
 msgid ""
 "Libgda is required to store clipboard history between sessions. Install "
 "either libgda 5.0 or 6.0 with SQLite support to use this feature. After "
@@ -1070,16 +1039,48 @@ msgstr ""
 "跨会话存储剪贴板历史记录需要 libgda。请安装支持 SQLite 的 libgda 5.0 或 6.0 "
 "以使用此功能。安装 libgda 后，您需要注销或重启系统。"
 
-#: src/lib/preferences/dependencies/dependencies.ts:338
+#: src/lib/preferences/dependencies/dependencies.ts:157
 msgid "Install Libgda"
 msgstr "安装 Libgda"
 
-#: src/lib/preferences/dependencies/dependencies.ts:346
-#: src/lib/preferences/dependencies/dependencies.ts:432
+#: src/lib/preferences/dependencies/dependencies.ts:170
+#: src/lib/preferences/dependencies/dependencies.ts:440
+msgid "Highlight.js Not Installed"
+msgstr "Highlight.js 未安装"
+
+#: src/lib/preferences/dependencies/dependencies.ts:171
+msgid "Highlight.js is required to display syntax highlighted code."
+msgstr "需要 Highlight.js 来显示代码语法高亮。"
+
+#: src/lib/preferences/dependencies/dependencies.ts:175
+msgid "Manual Installation"
+msgstr "手动安装"
+
+#: src/lib/preferences/dependencies/dependencies.ts:189
+msgid ""
+"You can manually install highlight.js by downloading highlight.min.js from "
+"\"Url\" to \"Install Location\"."
+msgstr ""
+"您可以从“网址”下载 highlight.min.js 到“安装位置”来手动安装 highlight.js。"
+
+#: src/lib/preferences/dependencies/dependencies.ts:206
+msgid "Url"
+msgstr "网址"
+
+#: src/lib/preferences/dependencies/dependencies.ts:215
+msgid "Install Location"
+msgstr "安装位置"
+
+#: src/lib/preferences/dependencies/dependencies.ts:224
+msgid "Install"
+msgstr "安装"
+
+#: src/lib/preferences/dependencies/dependencies.ts:353
+#: src/lib/preferences/dependencies/dependencies.ts:439
 msgid "GSound Not Installed"
 msgstr "GSound 未安装"
 
-#: src/lib/preferences/dependencies/dependencies.ts:348
+#: src/lib/preferences/dependencies/dependencies.ts:355
 msgid ""
 "GSound is required to play sound effects. Install GSound to use this "
 "feature. After installing GSound you will need to log out or restart your "
@@ -1088,19 +1089,19 @@ msgstr ""
 "播放音效需要安装 GSound。请安装 GSound 以使用此功能。安装完成后，您需要注销或"
 "重启系统。"
 
-#: src/lib/preferences/dependencies/dependencies.ts:351
+#: src/lib/preferences/dependencies/dependencies.ts:358
 msgid "Install GSound"
 msgstr "安装 GSound"
 
-#: src/lib/preferences/dependencies/dependencies.ts:364
+#: src/lib/preferences/dependencies/dependencies.ts:371
 msgid "Starting Highlight.js Download"
 msgstr "开始下载 Highlight.js"
 
-#: src/lib/preferences/dependencies/dependencies.ts:384
+#: src/lib/preferences/dependencies/dependencies.ts:391
 msgid "Successfully Installed Highlight.js"
 msgstr "安装 Highlight.js 成功"
 
-#: src/lib/preferences/dependencies/dependencies.ts:384
+#: src/lib/preferences/dependencies/dependencies.ts:391
 msgid "Error Installing Highlight.js"
 msgstr "安装 Highlight.js 时出错"
 
@@ -1332,6 +1333,10 @@ msgstr "暗色"
 #: src/lib/preferences/customization/themeCustomization.ts:90
 msgid "Light"
 msgstr "亮色"
+
+#: src/lib/preferences/customization/themeCustomization.ts:75
+msgid "High Contrast"
+msgstr ""
 
 #: src/lib/preferences/customization/themeCustomization.ts:88
 msgid "Color Scheme"
@@ -1796,14 +1801,40 @@ msgstr "制表符宽度"
 msgid "Change the width of a tab character in the clipboard items"
 msgstr "修改剪贴板项中制表符的宽度"
 
+#: src/lib/database/entryTracker.ts:132 src/lib/database/entryTracker.ts:147
+msgid "Failed to load Gda"
+msgstr "加载 Gda 失败"
+
+#: src/lib/database/entryTracker.ts:133 src/lib/database/entryTracker.ts:147
+#: src/lib/database/entryTracker.ts:163
+msgid "Clipboard history will be disabled"
+msgstr "剪贴板历史将被禁用"
+
+#: src/lib/database/entryTracker.ts:134
+msgid "Disable Warning"
+msgstr "禁用警告"
+
+#: src/lib/database/entryTracker.ts:163
+msgid "Failed to load JSON"
+msgstr ""
+
 #: src/prefs.ts:70
 msgid "General"
 msgstr "通用"
 
-#: src/prefs.ts:92
+#: src/prefs.ts:90
 msgid "Customization"
 msgstr "自定义"
 
-#: src/prefs.ts:109
+#: src/prefs.ts:107
 msgid "Shortcuts"
 msgstr "快捷键"
+
+#~ msgid "Failed to load database"
+#~ msgstr "加载数据库失败"
+
+#~ msgid "Use In-Memory Database"
+#~ msgstr "使用内存数据库"
+
+#~ msgid "Store clipboard history in memory instead of on disk"
+#~ msgstr "将剪贴板历史记录存储在内存而非磁盘中"

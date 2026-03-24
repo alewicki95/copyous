@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-16 00:27+0000\n"
+"POT-Creation-Date: 2026-03-23 23:25+0000\n"
 "PO-Revision-Date: 2025-12-01 18:02-0300\n"
 "Last-Translator: Murilo Leal <murilormleal@outlook.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
@@ -106,8 +106,8 @@ msgstr "Co__r"
 msgid "Type to search"
 msgstr "Digite para pesquisar"
 
-#: src/lib/ui/components/editDialog.ts:231
-#: src/lib/ui/components/editDialog.ts:258
+#: src/lib/ui/components/editDialog.ts:217
+#: src/lib/ui/components/editDialog.ts:244
 #: src/lib/preferences/actions/actionDefaults.ts:72
 #: src/lib/preferences/shortcuts/itemShortcuts.ts:38
 #: src/lib/preferences/general/feedbackSettings.ts:155
@@ -116,11 +116,11 @@ msgstr "Digite para pesquisar"
 msgid "None"
 msgstr "Nenhum"
 
-#: src/lib/ui/components/editDialog.ts:283
+#: src/lib/ui/components/editDialog.ts:269
 msgid "Edit Clipboard Item"
 msgstr "Editar Item da Área de Transferência"
 
-#: src/lib/ui/components/editDialog.ts:310 src/lib/ui/indicator.ts:45
+#: src/lib/ui/components/editDialog.ts:306 src/lib/ui/indicator.ts:45
 #: src/lib/preferences/actions/actionsPage.ts:27
 #: src/lib/preferences/actions/actionsPage.ts:40
 #: src/lib/preferences/actions/actionSubMenuDialog.ts:34
@@ -128,12 +128,12 @@ msgstr "Editar Item da Área de Transferência"
 #: src/lib/preferences/actions/actionDialog.ts:234
 #: src/lib/preferences/shortcuts/shortcutRow.ts:131
 #: src/lib/preferences/general/appExclusionSettings.ts:169
-#: src/lib/preferences/dependencies/dependencies.ts:203
+#: src/lib/preferences/dependencies/dependencies.ts:222
 #: src/lib/preferences/customization/items/exclusions.ts:90
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/lib/ui/components/editDialog.ts:317
+#: src/lib/ui/components/editDialog.ts:313
 #: src/lib/preferences/actions/actionDialog.ts:662
 msgid "Save"
 msgstr "Salvar"
@@ -200,7 +200,8 @@ msgid "Edit"
 msgstr "Editar"
 
 #: src/lib/ui/clipboardDialog.ts:137 src/lib/ui/clipboardDialog.ts:242
-#: src/lib/ui/indicator.ts:52 src/lib/preferences/general/historySettings.ts:64
+#: src/lib/ui/indicator.ts:52
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Clear"
 msgstr "Limpar"
 
@@ -321,22 +322,6 @@ msgid "%d File"
 msgid_plural "%d Files"
 msgstr[0] "%d Arquivo"
 msgstr[1] "%d Arquivos"
-
-#: src/lib/misc/db.ts:134
-msgid "Failed to load Gda"
-msgstr "Falha ao carregar Gda"
-
-#: src/lib/misc/db.ts:135 src/lib/misc/db.ts:160
-msgid "Clipboard history will be disabled"
-msgstr "O histórico da área de transferência será desativado"
-
-#: src/lib/misc/db.ts:136
-msgid "Disable Warning"
-msgstr "Desativar aviso"
-
-#: src/lib/misc/db.ts:159
-msgid "Failed to load database"
-msgstr "Falha ao carregar banco de dados"
 
 #: src/lib/misc/notifications.ts:63 src/lib/misc/notifications.ts:114
 msgid "Copied Text"
@@ -811,27 +796,43 @@ msgstr ""
 "Gerenciar aplicativos que serão excluídos do histórico da área de "
 "transferência"
 
-#: src/lib/preferences/general/historySettings.ts:38
+#: src/lib/preferences/general/historySettings.ts:63
 msgid "History"
 msgstr "Histórico"
 
-#: src/lib/preferences/general/historySettings.ts:44
-msgid "Use In-Memory Database"
-msgstr "Usar Banco de Dados em Memória"
+#: src/lib/preferences/general/historySettings.ts:69
+msgid "Memory"
+msgstr ""
 
-#: src/lib/preferences/general/historySettings.ts:45
-msgid "Store clipboard history in memory instead of on disk"
-msgstr "Armazenar histórico de clipboard em memória em vez de em disco"
+#: src/lib/preferences/general/historySettings.ts:70
+msgid "SQLite"
+msgstr ""
 
-#: src/lib/preferences/general/historySettings.ts:52
+#: src/lib/preferences/general/historySettings.ts:70
+msgid "(recommended)"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:71
+msgid "JSON"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:98
+msgid "Database"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:99
+msgid "Select which database type to use for storing your clipboard"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:124
 msgid "Database Location"
 msgstr "Local do Banco de Dados"
 
-#: src/lib/preferences/general/historySettings.ts:60
+#: src/lib/preferences/general/historySettings.ts:132
 msgid "Clipboard History"
 msgstr "Histórico de Clipboard"
 
-#: src/lib/preferences/general/historySettings.ts:62
+#: src/lib/preferences/general/historySettings.ts:134
 msgid ""
 "Choose what to do with your clipboard history when you restart, log out, or "
 "shut down your system"
@@ -839,27 +840,27 @@ msgstr ""
 "Escolha o que fazer com o histórico da área de transferência ao reiniciar, "
 "fazer logout ou desligar o sistema"
 
-#: src/lib/preferences/general/historySettings.ts:64
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Keep Pinned/Tagged"
 msgstr "Manter Marcados"
 
-#: src/lib/preferences/general/historySettings.ts:64
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Keep All"
 msgstr "Manter Todos"
 
-#: src/lib/preferences/general/historySettings.ts:70
+#: src/lib/preferences/general/historySettings.ts:142
 msgid "History Length"
 msgstr "Tamanho do Histórico"
 
-#: src/lib/preferences/general/historySettings.ts:71
+#: src/lib/preferences/general/historySettings.ts:143
 msgid "Select how many items to keep in the clipboard history"
 msgstr "Selecione quantos itens manter no histórico da área de transferência"
 
-#: src/lib/preferences/general/historySettings.ts:77
+#: src/lib/preferences/general/historySettings.ts:149
 msgid "History Time Limit"
 msgstr "Tempo Limite do Histórico"
 
-#: src/lib/preferences/general/historySettings.ts:79
+#: src/lib/preferences/general/historySettings.ts:151
 msgid ""
 "Select how many minutes to keep items in the clipboard history. Set to 0 to "
 "disable the time limit"
@@ -1048,44 +1049,11 @@ msgid "Sound to play when a clipboard item is copied"
 msgstr "Som a reproduzir quando um item da área de transferência for copiado"
 
 #: src/lib/preferences/dependencies/dependencies.ts:151
-#: src/lib/preferences/dependencies/dependencies.ts:433
-msgid "Highlight.js Not Installed"
-msgstr "Highlight.js não instalado"
-
-#: src/lib/preferences/dependencies/dependencies.ts:152
-msgid "Highlight.js is required to display syntax highlighted code."
-msgstr "Highlight.js é necessário para exibir código sintaticamente destacado."
-
-#: src/lib/preferences/dependencies/dependencies.ts:156
-msgid "Manual Installation"
-msgstr "Instalação Manual"
-
-#: src/lib/preferences/dependencies/dependencies.ts:170
-msgid ""
-"You can manually install highlight.js by downloading highlight.min.js from "
-"\"Url\" to \"Install Location\"."
-msgstr ""
-"Você pode instalar manualmente o highlight.js baixando o highlight.min.js da "
-"\"Url\" para o \"Local de Instalação\"."
-
-#: src/lib/preferences/dependencies/dependencies.ts:187
-msgid "Url"
-msgstr "Url"
-
-#: src/lib/preferences/dependencies/dependencies.ts:196
-msgid "Install Location"
-msgstr "Local de Instalação"
-
-#: src/lib/preferences/dependencies/dependencies.ts:205
-msgid "Install"
-msgstr "Instalar"
-
-#: src/lib/preferences/dependencies/dependencies.ts:332
-#: src/lib/preferences/dependencies/dependencies.ts:431
+#: src/lib/preferences/dependencies/dependencies.ts:438
 msgid "Libgda Not Installed"
 msgstr "Libgda Não Instalado"
 
-#: src/lib/preferences/dependencies/dependencies.ts:334
+#: src/lib/preferences/dependencies/dependencies.ts:153
 msgid ""
 "Libgda is required to store clipboard history between sessions. Install "
 "either libgda 5.0 or 6.0 with SQLite support to use this feature. After "
@@ -1096,16 +1064,49 @@ msgstr ""
 "este recurso. Após instalar o libgda, você precisará fazer logout ou "
 "reiniciar seu sistema."
 
-#: src/lib/preferences/dependencies/dependencies.ts:338
+#: src/lib/preferences/dependencies/dependencies.ts:157
 msgid "Install Libgda"
 msgstr "Instalar Libgda"
 
-#: src/lib/preferences/dependencies/dependencies.ts:346
-#: src/lib/preferences/dependencies/dependencies.ts:432
+#: src/lib/preferences/dependencies/dependencies.ts:170
+#: src/lib/preferences/dependencies/dependencies.ts:440
+msgid "Highlight.js Not Installed"
+msgstr "Highlight.js não instalado"
+
+#: src/lib/preferences/dependencies/dependencies.ts:171
+msgid "Highlight.js is required to display syntax highlighted code."
+msgstr "Highlight.js é necessário para exibir código sintaticamente destacado."
+
+#: src/lib/preferences/dependencies/dependencies.ts:175
+msgid "Manual Installation"
+msgstr "Instalação Manual"
+
+#: src/lib/preferences/dependencies/dependencies.ts:189
+msgid ""
+"You can manually install highlight.js by downloading highlight.min.js from "
+"\"Url\" to \"Install Location\"."
+msgstr ""
+"Você pode instalar manualmente o highlight.js baixando o highlight.min.js da "
+"\"Url\" para o \"Local de Instalação\"."
+
+#: src/lib/preferences/dependencies/dependencies.ts:206
+msgid "Url"
+msgstr "Url"
+
+#: src/lib/preferences/dependencies/dependencies.ts:215
+msgid "Install Location"
+msgstr "Local de Instalação"
+
+#: src/lib/preferences/dependencies/dependencies.ts:224
+msgid "Install"
+msgstr "Instalar"
+
+#: src/lib/preferences/dependencies/dependencies.ts:353
+#: src/lib/preferences/dependencies/dependencies.ts:439
 msgid "GSound Not Installed"
 msgstr "GSound Não Instalado"
 
-#: src/lib/preferences/dependencies/dependencies.ts:348
+#: src/lib/preferences/dependencies/dependencies.ts:355
 msgid ""
 "GSound is required to play sound effects. Install GSound to use this "
 "feature. After installing GSound you will need to log out or restart your "
@@ -1115,19 +1116,19 @@ msgstr ""
 "usar este recurso. Após instalar o GSound, você precisará fazer logout ou "
 "reiniciar seu sistema."
 
-#: src/lib/preferences/dependencies/dependencies.ts:351
+#: src/lib/preferences/dependencies/dependencies.ts:358
 msgid "Install GSound"
 msgstr "Instalar GSound"
 
-#: src/lib/preferences/dependencies/dependencies.ts:364
+#: src/lib/preferences/dependencies/dependencies.ts:371
 msgid "Starting Highlight.js Download"
 msgstr "Inicializando Download de Highlight.js"
 
-#: src/lib/preferences/dependencies/dependencies.ts:384
+#: src/lib/preferences/dependencies/dependencies.ts:391
 msgid "Successfully Installed Highlight.js"
 msgstr "Highlight.js Instalado com Sucesso"
 
-#: src/lib/preferences/dependencies/dependencies.ts:384
+#: src/lib/preferences/dependencies/dependencies.ts:391
 msgid "Error Installing Highlight.js"
 msgstr "Erro ao Instalar Highlight.js"
 
@@ -1361,6 +1362,10 @@ msgstr "Escuro"
 #: src/lib/preferences/customization/themeCustomization.ts:90
 msgid "Light"
 msgstr "Claro"
+
+#: src/lib/preferences/customization/themeCustomization.ts:75
+msgid "High Contrast"
+msgstr ""
 
 #: src/lib/preferences/customization/themeCustomization.ts:88
 msgid "Color Scheme"
@@ -1831,14 +1836,40 @@ msgstr "Largura da guia"
 msgid "Change the width of a tab character in the clipboard items"
 msgstr "Alterar a largura da guia dos itens da área de transferência"
 
+#: src/lib/database/entryTracker.ts:132 src/lib/database/entryTracker.ts:147
+msgid "Failed to load Gda"
+msgstr "Falha ao carregar Gda"
+
+#: src/lib/database/entryTracker.ts:133 src/lib/database/entryTracker.ts:147
+#: src/lib/database/entryTracker.ts:163
+msgid "Clipboard history will be disabled"
+msgstr "O histórico da área de transferência será desativado"
+
+#: src/lib/database/entryTracker.ts:134
+msgid "Disable Warning"
+msgstr "Desativar aviso"
+
+#: src/lib/database/entryTracker.ts:163
+msgid "Failed to load JSON"
+msgstr ""
+
 #: src/prefs.ts:70
 msgid "General"
 msgstr "Geral"
 
-#: src/prefs.ts:92
+#: src/prefs.ts:90
 msgid "Customization"
 msgstr "Customização"
 
-#: src/prefs.ts:109
+#: src/prefs.ts:107
 msgid "Shortcuts"
 msgstr "Atalhos"
+
+#~ msgid "Failed to load database"
+#~ msgstr "Falha ao carregar banco de dados"
+
+#~ msgid "Use In-Memory Database"
+#~ msgstr "Usar Banco de Dados em Memória"
+
+#~ msgid "Store clipboard history in memory instead of on disk"
+#~ msgstr "Armazenar histórico de clipboard em memória em vez de em disco"

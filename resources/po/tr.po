@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-16 00:27+0000\n"
+"POT-Creation-Date: 2026-03-23 23:25+0000\n"
 "PO-Revision-Date: 2026-03-18 07:29+0300\n"
 "Last-Translator: Muha Aliss <muhaaliss@pm.me>\n"
 "Language-Team: Turkish\n"
@@ -108,8 +108,8 @@ msgstr "Re__nk"
 msgid "Type to search"
 msgstr "Aramak için yaz"
 
-#: src/lib/ui/components/editDialog.ts:231
-#: src/lib/ui/components/editDialog.ts:258
+#: src/lib/ui/components/editDialog.ts:217
+#: src/lib/ui/components/editDialog.ts:244
 #: src/lib/preferences/actions/actionDefaults.ts:72
 #: src/lib/preferences/shortcuts/itemShortcuts.ts:38
 #: src/lib/preferences/general/feedbackSettings.ts:155
@@ -118,11 +118,11 @@ msgstr "Aramak için yaz"
 msgid "None"
 msgstr "Hiçbiri"
 
-#: src/lib/ui/components/editDialog.ts:283
+#: src/lib/ui/components/editDialog.ts:269
 msgid "Edit Clipboard Item"
 msgstr "Pano Öğesini Düzenle"
 
-#: src/lib/ui/components/editDialog.ts:310 src/lib/ui/indicator.ts:45
+#: src/lib/ui/components/editDialog.ts:306 src/lib/ui/indicator.ts:45
 #: src/lib/preferences/actions/actionsPage.ts:27
 #: src/lib/preferences/actions/actionsPage.ts:40
 #: src/lib/preferences/actions/actionSubMenuDialog.ts:34
@@ -130,12 +130,12 @@ msgstr "Pano Öğesini Düzenle"
 #: src/lib/preferences/actions/actionDialog.ts:234
 #: src/lib/preferences/shortcuts/shortcutRow.ts:131
 #: src/lib/preferences/general/appExclusionSettings.ts:169
-#: src/lib/preferences/dependencies/dependencies.ts:203
+#: src/lib/preferences/dependencies/dependencies.ts:222
 #: src/lib/preferences/customization/items/exclusions.ts:90
 msgid "Cancel"
 msgstr "İptal"
 
-#: src/lib/ui/components/editDialog.ts:317
+#: src/lib/ui/components/editDialog.ts:313
 #: src/lib/preferences/actions/actionDialog.ts:662
 msgid "Save"
 msgstr "Kaydet"
@@ -202,7 +202,8 @@ msgid "Edit"
 msgstr "Düzenle"
 
 #: src/lib/ui/clipboardDialog.ts:137 src/lib/ui/clipboardDialog.ts:242
-#: src/lib/ui/indicator.ts:52 src/lib/preferences/general/historySettings.ts:64
+#: src/lib/ui/indicator.ts:52
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Clear"
 msgstr "Temizle"
 
@@ -324,22 +325,6 @@ msgid_plural "%d Files"
 msgstr[0] "%d Dosya"
 msgstr[1] "%d Dosya"
 
-#: src/lib/misc/db.ts:134
-msgid "Failed to load Gda"
-msgstr "Gda yüklenemedi"
-
-#: src/lib/misc/db.ts:135 src/lib/misc/db.ts:160
-msgid "Clipboard history will be disabled"
-msgstr "Pano geçmişi devre dışı bırakılacak"
-
-#: src/lib/misc/db.ts:136
-msgid "Disable Warning"
-msgstr "Uyarıyı Devre Dışı Bırak"
-
-#: src/lib/misc/db.ts:159
-msgid "Failed to load database"
-msgstr "Veritabanı yüklenemedi"
-
 #: src/lib/misc/notifications.ts:63 src/lib/misc/notifications.ts:114
 msgid "Copied Text"
 msgstr "Metin Kopyalandı"
@@ -397,7 +382,8 @@ msgstr "Varsayılan Eylemler"
 
 #: src/lib/preferences/actions/actionsPage.ts:75
 msgid "Set default actions that trigger when holding control"
-msgstr "Kontrol tuşuna basılı tutulduğunda tetiklenen varsayılan eylemleri ayarla"
+msgstr ""
+"Kontrol tuşuna basılı tutulduğunda tetiklenen varsayılan eylemleri ayarla"
 
 #: src/lib/preferences/actions/actionsPage.ts:92
 msgid "Restore Built-In Actions"
@@ -759,7 +745,9 @@ msgstr "Kaydırma Kısayolunu Değiştir"
 
 #: src/lib/preferences/shortcuts/searchShortcuts.ts:75
 msgid "Swaps scroll shortcuts of cycling item types and item tags"
-msgstr "Öğe türleri ve öğe etiketleri arasında gezinmek için kaydırma kısayollarını değiştirir"
+msgstr ""
+"Öğe türleri ve öğe etiketleri arasında gezinmek için kaydırma kısayollarını "
+"değiştirir"
 
 #: src/lib/preferences/shortcuts/searchShortcuts.ts:79
 msgid "Cycle Item Type"
@@ -810,61 +798,77 @@ msgstr "Uygulama Hariç Tutmalarını Yönet"
 msgid "Manage apps that will be excluded from clipboard history"
 msgstr "Pano geçmişinden hariç tutulacak uygulamaları yönetin"
 
-#: src/lib/preferences/general/historySettings.ts:38
+#: src/lib/preferences/general/historySettings.ts:63
 msgid "History"
 msgstr "Geçmiş"
 
-#: src/lib/preferences/general/historySettings.ts:44
-msgid "Use In-Memory Database"
-msgstr "Bellek İçi Veritabanı Kullan"
+#: src/lib/preferences/general/historySettings.ts:69
+msgid "Memory"
+msgstr ""
 
-#: src/lib/preferences/general/historySettings.ts:45
-msgid "Store clipboard history in memory instead of on disk"
-msgstr "Pano geçmişini disk yerine bellekte sakla"
+#: src/lib/preferences/general/historySettings.ts:70
+msgid "SQLite"
+msgstr ""
 
-#: src/lib/preferences/general/historySettings.ts:52
+#: src/lib/preferences/general/historySettings.ts:70
+msgid "(recommended)"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:71
+msgid "JSON"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:98
+msgid "Database"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:99
+msgid "Select which database type to use for storing your clipboard"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:124
 msgid "Database Location"
 msgstr "Veritabanı Konumu"
 
-#: src/lib/preferences/general/historySettings.ts:60
+#: src/lib/preferences/general/historySettings.ts:132
 msgid "Clipboard History"
 msgstr "Pano Geçmişi"
 
-#: src/lib/preferences/general/historySettings.ts:62
+#: src/lib/preferences/general/historySettings.ts:134
 msgid ""
 "Choose what to do with your clipboard history when you restart, log out, or "
 "shut down your system"
 msgstr ""
-"Sistemi yeniden başlattığında, oturumu kapattığında veya "
-"cihazı kapattığında pano geçmişine ne yapılacağını seç"
+"Sistemi yeniden başlattığında, oturumu kapattığında veya cihazı kapattığında "
+"pano geçmişine ne yapılacağını seç"
 
-#: src/lib/preferences/general/historySettings.ts:64
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Keep Pinned/Tagged"
 msgstr "İğnelenenleri/Etiketlenenleri Koru"
 
-#: src/lib/preferences/general/historySettings.ts:64
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Keep All"
 msgstr "Hepsini Koru"
 
-#: src/lib/preferences/general/historySettings.ts:70
+#: src/lib/preferences/general/historySettings.ts:142
 msgid "History Length"
 msgstr "Geçmiş Uzunluğu"
 
-#: src/lib/preferences/general/historySettings.ts:71
+#: src/lib/preferences/general/historySettings.ts:143
 msgid "Select how many items to keep in the clipboard history"
 msgstr "Pano geçmişinde kaç öğe tutulacağını seç"
 
-#: src/lib/preferences/general/historySettings.ts:77
+#: src/lib/preferences/general/historySettings.ts:149
 msgid "History Time Limit"
 msgstr "Geçmiş Zaman Sınırı"
 
-#: src/lib/preferences/general/historySettings.ts:79
+#: src/lib/preferences/general/historySettings.ts:151
 msgid ""
 "Select how many minutes to keep items in the clipboard history. Set to 0 to "
 "disable the time limit"
 msgstr ""
-"Pano geçmişinde öğelerin kaç dakika tutulacağını seç. Zaman sınırını "
-"devre dışı bırakmak için 0 olarak ayarla"
+"Pano geçmişinde öğelerin kaç dakika tutulacağını seç. Zaman sınırını devre "
+"dışı bırakmak için 0 olarak ayarla"
 
 #: src/lib/preferences/general/behaviorSettings.ts:12
 msgid "Behavior"
@@ -919,8 +923,7 @@ msgstr "Kopyalamada Yapıştır"
 #: src/lib/preferences/general/behaviorSettings.ts:47
 msgid ""
 "Automatically paste clipboard items when selected from clipboard history"
-msgstr ""
-"Pano geçmişinden bir öğe seçildiğinde otomatik olarak yapıştır"
+msgstr "Pano geçmişinden bir öğe seçildiğinde otomatik olarak yapıştır"
 
 #: src/lib/preferences/general/behaviorSettings.ts:52
 msgid "Sync Primary Clipboard"
@@ -938,8 +941,7 @@ msgstr "Kopyalamada Tarihi Güncelle"
 msgid ""
 "Update the copied date of clipboard items when selected from clipboard "
 "history"
-msgstr ""
-"Pano geçmişinden bir öğe seçildiğinde kopyalanma tarihini güncelle"
+msgstr "Pano geçmişinden bir öğe seçildiğinde kopyalanma tarihini güncelle"
 
 #: src/lib/preferences/general/locationsGroup.ts:13
 msgid "Locations"
@@ -1043,44 +1045,11 @@ msgid "Sound to play when a clipboard item is copied"
 msgstr "Bir pano öğesi kopyalandığında çalınacak ses"
 
 #: src/lib/preferences/dependencies/dependencies.ts:151
-#: src/lib/preferences/dependencies/dependencies.ts:433
-msgid "Highlight.js Not Installed"
-msgstr "Highlight.js Kurulu Değil"
-
-#: src/lib/preferences/dependencies/dependencies.ts:152
-msgid "Highlight.js is required to display syntax highlighted code."
-msgstr "Sözdizimi vurgulu kodları görüntülemek için Highlight.js gereklidir."
-
-#: src/lib/preferences/dependencies/dependencies.ts:156
-msgid "Manual Installation"
-msgstr "Elle Kurulum"
-
-#: src/lib/preferences/dependencies/dependencies.ts:170
-msgid ""
-"You can manually install highlight.js by downloading highlight.min.js from "
-"\"Url\" to \"Install Location\"."
-msgstr ""
-"Highlight.js'yi \"Adres\" üzerinden \"Kurulum Konumu\"na indirerek elle "
-"kurabilirsin."
-
-#: src/lib/preferences/dependencies/dependencies.ts:187
-msgid "Url"
-msgstr "Adres"
-
-#: src/lib/preferences/dependencies/dependencies.ts:196
-msgid "Install Location"
-msgstr "Kurulum Konumu"
-
-#: src/lib/preferences/dependencies/dependencies.ts:205
-msgid "Install"
-msgstr "Kur"
-
-#: src/lib/preferences/dependencies/dependencies.ts:332
-#: src/lib/preferences/dependencies/dependencies.ts:431
+#: src/lib/preferences/dependencies/dependencies.ts:438
 msgid "Libgda Not Installed"
 msgstr "Libgda Kurulu Değil"
 
-#: src/lib/preferences/dependencies/dependencies.ts:334
+#: src/lib/preferences/dependencies/dependencies.ts:153
 msgid ""
 "Libgda is required to store clipboard history between sessions. Install "
 "either libgda 5.0 or 6.0 with SQLite support to use this feature. After "
@@ -1088,19 +1057,52 @@ msgid ""
 msgstr ""
 "Pano geçmişini oturumlar arasında saklamak için Libgda gereklidir. Bu "
 "özelliği kullanmak için SQLite destekli libgda 5.0 veya 6.0 sürümünü kur. "
-"Libgda kurduktan sonra oturumu kapatman veya sistemi yeniden "
-"başlatman gerekecek."
+"Libgda kurduktan sonra oturumu kapatman veya sistemi yeniden başlatman "
+"gerekecek."
 
-#: src/lib/preferences/dependencies/dependencies.ts:338
+#: src/lib/preferences/dependencies/dependencies.ts:157
 msgid "Install Libgda"
 msgstr "Libgda Kur"
 
-#: src/lib/preferences/dependencies/dependencies.ts:346
-#: src/lib/preferences/dependencies/dependencies.ts:432
+#: src/lib/preferences/dependencies/dependencies.ts:170
+#: src/lib/preferences/dependencies/dependencies.ts:440
+msgid "Highlight.js Not Installed"
+msgstr "Highlight.js Kurulu Değil"
+
+#: src/lib/preferences/dependencies/dependencies.ts:171
+msgid "Highlight.js is required to display syntax highlighted code."
+msgstr "Sözdizimi vurgulu kodları görüntülemek için Highlight.js gereklidir."
+
+#: src/lib/preferences/dependencies/dependencies.ts:175
+msgid "Manual Installation"
+msgstr "Elle Kurulum"
+
+#: src/lib/preferences/dependencies/dependencies.ts:189
+msgid ""
+"You can manually install highlight.js by downloading highlight.min.js from "
+"\"Url\" to \"Install Location\"."
+msgstr ""
+"Highlight.js'yi \"Adres\" üzerinden \"Kurulum Konumu\"na indirerek elle "
+"kurabilirsin."
+
+#: src/lib/preferences/dependencies/dependencies.ts:206
+msgid "Url"
+msgstr "Adres"
+
+#: src/lib/preferences/dependencies/dependencies.ts:215
+msgid "Install Location"
+msgstr "Kurulum Konumu"
+
+#: src/lib/preferences/dependencies/dependencies.ts:224
+msgid "Install"
+msgstr "Kur"
+
+#: src/lib/preferences/dependencies/dependencies.ts:353
+#: src/lib/preferences/dependencies/dependencies.ts:439
 msgid "GSound Not Installed"
 msgstr "GSound Kurulu Değil"
 
-#: src/lib/preferences/dependencies/dependencies.ts:348
+#: src/lib/preferences/dependencies/dependencies.ts:355
 msgid ""
 "GSound is required to play sound effects. Install GSound to use this "
 "feature. After installing GSound you will need to log out or restart your "
@@ -1110,19 +1112,19 @@ msgstr ""
 "GSound kur. GSound kurduktan sonra oturumu kapatman veya sistemi yeniden "
 "başlatman gerekecek."
 
-#: src/lib/preferences/dependencies/dependencies.ts:351
+#: src/lib/preferences/dependencies/dependencies.ts:358
 msgid "Install GSound"
 msgstr "GSound Kur"
 
-#: src/lib/preferences/dependencies/dependencies.ts:364
+#: src/lib/preferences/dependencies/dependencies.ts:371
 msgid "Starting Highlight.js Download"
 msgstr "Highlight.js İndirmesi Başlatılıyor"
 
-#: src/lib/preferences/dependencies/dependencies.ts:384
+#: src/lib/preferences/dependencies/dependencies.ts:391
 msgid "Successfully Installed Highlight.js"
 msgstr "Highlight.js Başarıyla Kuruldu"
 
-#: src/lib/preferences/dependencies/dependencies.ts:384
+#: src/lib/preferences/dependencies/dependencies.ts:391
 msgid "Error Installing Highlight.js"
 msgstr "Highlight.js Kurulurken Hata Oluştu"
 
@@ -1357,6 +1359,10 @@ msgstr "Koyu"
 msgid "Light"
 msgstr "Açık"
 
+#: src/lib/preferences/customization/themeCustomization.ts:75
+msgid "High Contrast"
+msgstr ""
+
 #: src/lib/preferences/customization/themeCustomization.ts:88
 msgid "Color Scheme"
 msgstr "Renk Şeması"
@@ -1461,7 +1467,9 @@ msgstr "Küçük Resim"
 
 #: src/lib/preferences/customization/items/fileItemCustomization.ts:89
 msgid "Enable file previews for all files with generated thumbnails"
-msgstr "Oluşturulmuş küçük resimleri olan tüm dosyalar için dosya önizlemelerini etkinleştir"
+msgstr ""
+"Oluşturulmuş küçük resimleri olan tüm dosyalar için dosya önizlemelerini "
+"etkinleştir"
 
 #: src/lib/preferences/customization/items/fileItemCustomization.ts:100
 #: src/lib/preferences/customization/items/linkItemCustomization.ts:42
@@ -1470,7 +1478,8 @@ msgstr "Desen Ekle"
 
 #: src/lib/preferences/customization/items/fileItemCustomization.ts:101
 msgid "Enter a glob pattern to exclude files that should not have a preview."
-msgstr "Önizlemesi olmaması gereken dosyaları hariç tutmak için bir glob deseni gir."
+msgstr ""
+"Önizlemesi olmaması gereken dosyaları hariç tutmak için bir glob deseni gir."
 
 #: src/lib/preferences/customization/items/fileItemCustomization.ts:102
 msgid "Path"
@@ -1548,7 +1557,8 @@ msgstr "Sözdizimi Vurgulama"
 
 #: src/lib/preferences/customization/items/fileItemCustomization.ts:179
 msgid "Enable or disable syntax highlighting in the text preview"
-msgstr "Metin önizlemesinde sözdizimi vurgulamayı etkinleştir veya devre dışı bırak"
+msgstr ""
+"Metin önizlemesinde sözdizimi vurgulamayı etkinleştir veya devre dışı bırak"
 
 #: src/lib/preferences/customization/items/fileItemCustomization.ts:184
 #: src/lib/preferences/customization/items/codeItemCustomization.ts:26
@@ -1693,8 +1703,8 @@ msgstr "Bağlantı Hariç Tutmaları"
 msgid ""
 "Enter a regular expression to exclude links that should not have a preview."
 msgstr ""
-"Önizlemesi olmaması gereken bağlantıları hariç tutmak için bir düzenli "
-"ifade gir."
+"Önizlemesi olmaması gereken bağlantıları hariç tutmak için bir düzenli ifade "
+"gir."
 
 #: src/lib/preferences/customization/items/linkItemCustomization.ts:47
 msgid "Link Exclusion Patterns"
@@ -1824,14 +1834,40 @@ msgstr "Sekme Genişliği"
 msgid "Change the width of a tab character in the clipboard items"
 msgstr "Pano öğelerindeki sekme (tab) karakterinin genişliğini değiştir"
 
+#: src/lib/database/entryTracker.ts:132 src/lib/database/entryTracker.ts:147
+msgid "Failed to load Gda"
+msgstr "Gda yüklenemedi"
+
+#: src/lib/database/entryTracker.ts:133 src/lib/database/entryTracker.ts:147
+#: src/lib/database/entryTracker.ts:163
+msgid "Clipboard history will be disabled"
+msgstr "Pano geçmişi devre dışı bırakılacak"
+
+#: src/lib/database/entryTracker.ts:134
+msgid "Disable Warning"
+msgstr "Uyarıyı Devre Dışı Bırak"
+
+#: src/lib/database/entryTracker.ts:163
+msgid "Failed to load JSON"
+msgstr ""
+
 #: src/prefs.ts:70
 msgid "General"
 msgstr "Genel"
 
-#: src/prefs.ts:92
+#: src/prefs.ts:90
 msgid "Customization"
 msgstr "Özelleştirme"
 
-#: src/prefs.ts:109
+#: src/prefs.ts:107
 msgid "Shortcuts"
 msgstr "Kısayollar"
+
+#~ msgid "Failed to load database"
+#~ msgstr "Veritabanı yüklenemedi"
+
+#~ msgid "Use In-Memory Database"
+#~ msgstr "Bellek İçi Veritabanı Kullan"
+
+#~ msgid "Store clipboard history in memory instead of on disk"
+#~ msgstr "Pano geçmişini disk yerine bellekte sakla"

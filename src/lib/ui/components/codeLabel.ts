@@ -6,7 +6,7 @@ import St from 'gi://St';
 
 import type CopyousExtension from '../../../extension.js';
 import { registerClass } from '../../common/gjs.js';
-import { Language } from '../../misc/db.js';
+import { Language } from '../../database/database.js';
 import { ColorScheme } from '../../misc/theme.js';
 import { normalizeIndentation, trim } from './label.js';
 
@@ -394,7 +394,7 @@ export class CodeLabel extends St.Label {
 
 		if (this.showLineNumbers && lines.length > 1) {
 			// Add line numbers
-			const color = this.ext.themeManager?.colorScheme ? Colors.dark_7 : Colors.light_1;
+			const color = this.ext.themeManager?.colorScheme === ColorScheme.Light ? Colors.dark_7 : Colors.light_1;
 			const span = `<span color="${color}" alpha="50%">`;
 			text = lines.map((l, i) => `${span}${i.toString().padEnd(2, ' ')}</span> ${l}`).join('\n');
 		}

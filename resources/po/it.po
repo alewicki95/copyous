@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-16 00:27+0000\n"
+"POT-Creation-Date: 2026-03-23 23:25+0000\n"
 "PO-Revision-Date: 2025-12-14 10:45+0100\n"
 "Last-Translator: Fabian Esposito <fabian.esposito@outlook.com>\n"
 "Language-Team: Italiano\n"
@@ -106,8 +106,8 @@ msgstr "Color__e"
 msgid "Type to search"
 msgstr "Digitare per la ricerca"
 
-#: src/lib/ui/components/editDialog.ts:231
-#: src/lib/ui/components/editDialog.ts:258
+#: src/lib/ui/components/editDialog.ts:217
+#: src/lib/ui/components/editDialog.ts:244
 #: src/lib/preferences/actions/actionDefaults.ts:72
 #: src/lib/preferences/shortcuts/itemShortcuts.ts:38
 #: src/lib/preferences/general/feedbackSettings.ts:155
@@ -116,11 +116,11 @@ msgstr "Digitare per la ricerca"
 msgid "None"
 msgstr "Nessuno"
 
-#: src/lib/ui/components/editDialog.ts:283
+#: src/lib/ui/components/editDialog.ts:269
 msgid "Edit Clipboard Item"
 msgstr "Modifica elemento degli appunti"
 
-#: src/lib/ui/components/editDialog.ts:310 src/lib/ui/indicator.ts:45
+#: src/lib/ui/components/editDialog.ts:306 src/lib/ui/indicator.ts:45
 #: src/lib/preferences/actions/actionsPage.ts:27
 #: src/lib/preferences/actions/actionsPage.ts:40
 #: src/lib/preferences/actions/actionSubMenuDialog.ts:34
@@ -128,12 +128,12 @@ msgstr "Modifica elemento degli appunti"
 #: src/lib/preferences/actions/actionDialog.ts:234
 #: src/lib/preferences/shortcuts/shortcutRow.ts:131
 #: src/lib/preferences/general/appExclusionSettings.ts:169
-#: src/lib/preferences/dependencies/dependencies.ts:203
+#: src/lib/preferences/dependencies/dependencies.ts:222
 #: src/lib/preferences/customization/items/exclusions.ts:90
 msgid "Cancel"
 msgstr "Annulla"
 
-#: src/lib/ui/components/editDialog.ts:317
+#: src/lib/ui/components/editDialog.ts:313
 #: src/lib/preferences/actions/actionDialog.ts:662
 msgid "Save"
 msgstr "Salva"
@@ -200,7 +200,8 @@ msgid "Edit"
 msgstr "Modifica"
 
 #: src/lib/ui/clipboardDialog.ts:137 src/lib/ui/clipboardDialog.ts:242
-#: src/lib/ui/indicator.ts:52 src/lib/preferences/general/historySettings.ts:64
+#: src/lib/ui/indicator.ts:52
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Clear"
 msgstr "Cancella"
 
@@ -321,22 +322,6 @@ msgid "%d File"
 msgid_plural "%d Files"
 msgstr[0] "%d file"
 msgstr[1] "%d file"
-
-#: src/lib/misc/db.ts:134
-msgid "Failed to load Gda"
-msgstr "Impossibile caricare Gda"
-
-#: src/lib/misc/db.ts:135 src/lib/misc/db.ts:160
-msgid "Clipboard history will be disabled"
-msgstr "La cronologia degli appunti sarà disabilitata"
-
-#: src/lib/misc/db.ts:136
-msgid "Disable Warning"
-msgstr "Disabilita avviso"
-
-#: src/lib/misc/db.ts:159
-msgid "Failed to load database"
-msgstr "Impossibile caricare il database"
 
 #: src/lib/misc/notifications.ts:63 src/lib/misc/notifications.ts:114
 msgid "Copied Text"
@@ -812,27 +797,43 @@ msgstr "Gestisci esclusioni app"
 msgid "Manage apps that will be excluded from clipboard history"
 msgstr "Gestire le app che saranno escluse dalla cronologia degli appunti"
 
-#: src/lib/preferences/general/historySettings.ts:38
+#: src/lib/preferences/general/historySettings.ts:63
 msgid "History"
 msgstr "Cronologia"
 
-#: src/lib/preferences/general/historySettings.ts:44
-msgid "Use In-Memory Database"
-msgstr "Usa un database in memoria"
+#: src/lib/preferences/general/historySettings.ts:69
+msgid "Memory"
+msgstr ""
 
-#: src/lib/preferences/general/historySettings.ts:45
-msgid "Store clipboard history in memory instead of on disk"
-msgstr "Archivia la cronologia degli appunti in memoria anziché su disco"
+#: src/lib/preferences/general/historySettings.ts:70
+msgid "SQLite"
+msgstr ""
 
-#: src/lib/preferences/general/historySettings.ts:52
+#: src/lib/preferences/general/historySettings.ts:70
+msgid "(recommended)"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:71
+msgid "JSON"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:98
+msgid "Database"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:99
+msgid "Select which database type to use for storing your clipboard"
+msgstr ""
+
+#: src/lib/preferences/general/historySettings.ts:124
 msgid "Database Location"
 msgstr "Posizione del database"
 
-#: src/lib/preferences/general/historySettings.ts:60
+#: src/lib/preferences/general/historySettings.ts:132
 msgid "Clipboard History"
 msgstr "Cronologia degli appunti"
 
-#: src/lib/preferences/general/historySettings.ts:62
+#: src/lib/preferences/general/historySettings.ts:134
 msgid ""
 "Choose what to do with your clipboard history when you restart, log out, or "
 "shut down your system"
@@ -840,29 +841,29 @@ msgstr ""
 "Scegliere cosa fare con la cronologia degli appunti al riavvio, "
 "disconnessione o spegnimento del sistema"
 
-#: src/lib/preferences/general/historySettings.ts:64
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Keep Pinned/Tagged"
 msgstr "Conserva gli elementi fissati/contrassegnati"
 
-#: src/lib/preferences/general/historySettings.ts:64
+#: src/lib/preferences/general/historySettings.ts:136
 msgid "Keep All"
 msgstr "Conserva tutto"
 
-#: src/lib/preferences/general/historySettings.ts:70
+#: src/lib/preferences/general/historySettings.ts:142
 msgid "History Length"
 msgstr "Lunghezza della cronologia"
 
-#: src/lib/preferences/general/historySettings.ts:71
+#: src/lib/preferences/general/historySettings.ts:143
 msgid "Select how many items to keep in the clipboard history"
 msgstr ""
 "Selezionare il numero di elementi da conservare nella cronologia degli "
 "appunti"
 
-#: src/lib/preferences/general/historySettings.ts:77
+#: src/lib/preferences/general/historySettings.ts:149
 msgid "History Time Limit"
 msgstr "Limite di tempo della cronologia"
 
-#: src/lib/preferences/general/historySettings.ts:79
+#: src/lib/preferences/general/historySettings.ts:151
 msgid ""
 "Select how many minutes to keep items in the clipboard history. Set to 0 to "
 "disable the time limit"
@@ -1055,46 +1056,11 @@ msgid "Sound to play when a clipboard item is copied"
 msgstr "Suono da riprodurre quando un elemento degli appunti è copiato"
 
 #: src/lib/preferences/dependencies/dependencies.ts:151
-#: src/lib/preferences/dependencies/dependencies.ts:433
-msgid "Highlight.js Not Installed"
-msgstr "Highlight.js non installato"
-
-#: src/lib/preferences/dependencies/dependencies.ts:152
-msgid "Highlight.js is required to display syntax highlighted code."
-msgstr ""
-"Highlight.js è necessario per visualizzare il codice con evidenziazione "
-"della sintassi."
-
-#: src/lib/preferences/dependencies/dependencies.ts:156
-msgid "Manual Installation"
-msgstr "Installazione manuale"
-
-#: src/lib/preferences/dependencies/dependencies.ts:170
-msgid ""
-"You can manually install highlight.js by downloading highlight.min.js from "
-"\"Url\" to \"Install Location\"."
-msgstr ""
-"Puoi installare manualmente highlight.js scaricando highlight.min.js da "
-"\"Url\" a \"Percorso di installazione\"."
-
-#: src/lib/preferences/dependencies/dependencies.ts:187
-msgid "Url"
-msgstr "URL"
-
-#: src/lib/preferences/dependencies/dependencies.ts:196
-msgid "Install Location"
-msgstr "Posizione di installazione"
-
-#: src/lib/preferences/dependencies/dependencies.ts:205
-msgid "Install"
-msgstr "Installa"
-
-#: src/lib/preferences/dependencies/dependencies.ts:332
-#: src/lib/preferences/dependencies/dependencies.ts:431
+#: src/lib/preferences/dependencies/dependencies.ts:438
 msgid "Libgda Not Installed"
 msgstr "Libgda non installato"
 
-#: src/lib/preferences/dependencies/dependencies.ts:334
+#: src/lib/preferences/dependencies/dependencies.ts:153
 msgid ""
 "Libgda is required to store clipboard history between sessions. Install "
 "either libgda 5.0 or 6.0 with SQLite support to use this feature. After "
@@ -1105,16 +1071,51 @@ msgstr ""
 "questa funzione. Dopo l'installazione di libgda, dovrai disconnetterti o "
 "riavviare il sistema."
 
-#: src/lib/preferences/dependencies/dependencies.ts:338
+#: src/lib/preferences/dependencies/dependencies.ts:157
 msgid "Install Libgda"
 msgstr "Installa Libgda"
 
-#: src/lib/preferences/dependencies/dependencies.ts:346
-#: src/lib/preferences/dependencies/dependencies.ts:432
+#: src/lib/preferences/dependencies/dependencies.ts:170
+#: src/lib/preferences/dependencies/dependencies.ts:440
+msgid "Highlight.js Not Installed"
+msgstr "Highlight.js non installato"
+
+#: src/lib/preferences/dependencies/dependencies.ts:171
+msgid "Highlight.js is required to display syntax highlighted code."
+msgstr ""
+"Highlight.js è necessario per visualizzare il codice con evidenziazione "
+"della sintassi."
+
+#: src/lib/preferences/dependencies/dependencies.ts:175
+msgid "Manual Installation"
+msgstr "Installazione manuale"
+
+#: src/lib/preferences/dependencies/dependencies.ts:189
+msgid ""
+"You can manually install highlight.js by downloading highlight.min.js from "
+"\"Url\" to \"Install Location\"."
+msgstr ""
+"Puoi installare manualmente highlight.js scaricando highlight.min.js da "
+"\"Url\" a \"Percorso di installazione\"."
+
+#: src/lib/preferences/dependencies/dependencies.ts:206
+msgid "Url"
+msgstr "URL"
+
+#: src/lib/preferences/dependencies/dependencies.ts:215
+msgid "Install Location"
+msgstr "Posizione di installazione"
+
+#: src/lib/preferences/dependencies/dependencies.ts:224
+msgid "Install"
+msgstr "Installa"
+
+#: src/lib/preferences/dependencies/dependencies.ts:353
+#: src/lib/preferences/dependencies/dependencies.ts:439
 msgid "GSound Not Installed"
 msgstr "GSound non installato"
 
-#: src/lib/preferences/dependencies/dependencies.ts:348
+#: src/lib/preferences/dependencies/dependencies.ts:355
 msgid ""
 "GSound is required to play sound effects. Install GSound to use this "
 "feature. After installing GSound you will need to log out or restart your "
@@ -1124,19 +1125,19 @@ msgstr ""
 "utilizzare questa funzione. Dopo l'installazione di GSound, dovrai "
 "disconnetterti o riavviare il sistema."
 
-#: src/lib/preferences/dependencies/dependencies.ts:351
+#: src/lib/preferences/dependencies/dependencies.ts:358
 msgid "Install GSound"
 msgstr "Installa GSound"
 
-#: src/lib/preferences/dependencies/dependencies.ts:364
+#: src/lib/preferences/dependencies/dependencies.ts:371
 msgid "Starting Highlight.js Download"
 msgstr "Avvio del download di Highlight.js"
 
-#: src/lib/preferences/dependencies/dependencies.ts:384
+#: src/lib/preferences/dependencies/dependencies.ts:391
 msgid "Successfully Installed Highlight.js"
 msgstr "Highlight.js installato con successo"
 
-#: src/lib/preferences/dependencies/dependencies.ts:384
+#: src/lib/preferences/dependencies/dependencies.ts:391
 msgid "Error Installing Highlight.js"
 msgstr "Errore durante l'installazione di Highlight.js"
 
@@ -1375,6 +1376,10 @@ msgstr "Scuro"
 #: src/lib/preferences/customization/themeCustomization.ts:90
 msgid "Light"
 msgstr "Chiaro"
+
+#: src/lib/preferences/customization/themeCustomization.ts:75
+msgid "High Contrast"
+msgstr ""
 
 #: src/lib/preferences/customization/themeCustomization.ts:88
 msgid "Color Scheme"
@@ -1849,14 +1854,40 @@ msgstr ""
 "Modifica la larghezza del carattere di tabulazione negli elementi degli "
 "appunti"
 
+#: src/lib/database/entryTracker.ts:132 src/lib/database/entryTracker.ts:147
+msgid "Failed to load Gda"
+msgstr "Impossibile caricare Gda"
+
+#: src/lib/database/entryTracker.ts:133 src/lib/database/entryTracker.ts:147
+#: src/lib/database/entryTracker.ts:163
+msgid "Clipboard history will be disabled"
+msgstr "La cronologia degli appunti sarà disabilitata"
+
+#: src/lib/database/entryTracker.ts:134
+msgid "Disable Warning"
+msgstr "Disabilita avviso"
+
+#: src/lib/database/entryTracker.ts:163
+msgid "Failed to load JSON"
+msgstr ""
+
 #: src/prefs.ts:70
 msgid "General"
 msgstr "Generale"
 
-#: src/prefs.ts:92
+#: src/prefs.ts:90
 msgid "Customization"
 msgstr "Personalizzazione"
 
-#: src/prefs.ts:109
+#: src/prefs.ts:107
 msgid "Shortcuts"
 msgstr "Scorciatoie"
+
+#~ msgid "Failed to load database"
+#~ msgstr "Impossibile caricare il database"
+
+#~ msgid "Use In-Memory Database"
+#~ msgstr "Usa un database in memoria"
+
+#~ msgid "Store clipboard history in memory instead of on disk"
+#~ msgstr "Archivia la cronologia degli appunti in memoria anziché su disco"
