@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-16 22:30+0000\n"
+"POT-Creation-Date: 2026-04-16 22:41+0000\n"
 "PO-Revision-Date: 2026-03-26 22:19+0100\n"
 "Last-Translator: Christian Lauinger <christian@lauinger-clan.de>\n"
 "Language-Team: \n"
@@ -217,7 +217,7 @@ msgstr "Wählen Sie aus, welche Typen zulässig sind"
 #: src/lib/preferences/dependencies/dependencies.ts:222
 #: src/lib/preferences/general/appExclusionSettings.ts:169
 #: src/lib/preferences/shortcuts/shortcutRow.ts:131
-#: src/lib/ui/components/editDialog.ts:306 src/lib/ui/indicator.ts:45
+#: src/lib/ui/components/editDialog.ts:306 src/lib/ui/indicator.ts:46
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -1506,7 +1506,7 @@ msgstr ""
 
 #: src/lib/preferences/general/historySettings.ts:136
 #: src/lib/ui/clipboardDialog.ts:137 src/lib/ui/clipboardDialog.ts:242
-#: src/lib/ui/indicator.ts:52
+#: src/lib/ui/indicator.ts:53
 msgid "Clear"
 msgstr "Leeren"
 
@@ -1779,31 +1779,31 @@ msgstr "Clipboard-Element bearbeiten"
 msgid "Close"
 msgstr "Schliessen"
 
-#: src/lib/ui/indicator.ts:36
+#: src/lib/ui/indicator.ts:37
 msgid "Clear Clipboard History?"
 msgstr "Zwischenablage-Verlauf löschen?"
 
-#: src/lib/ui/indicator.ts:37
+#: src/lib/ui/indicator.ts:38
 msgid "Are you sure you want to clear your clipboard history?"
 msgstr "Möchten Sie wirklich den Verlauf Ihrer Zwischenablage löschen?"
 
-#: src/lib/ui/indicator.ts:41
+#: src/lib/ui/indicator.ts:42
 msgid "Clear Pinned/Tagged Items"
 msgstr "Fixierte/markierte Elemente löschen"
 
-#: src/lib/ui/indicator.ts:99
+#: src/lib/ui/indicator.ts:101
 msgid "Incognito Mode"
 msgstr "Inkognito-Modus"
 
-#: src/lib/ui/indicator.ts:102
+#: src/lib/ui/indicator.ts:104
 msgid "Clear History"
 msgstr "Verlauf löschen"
 
-#: src/lib/ui/indicator.ts:103
+#: src/lib/ui/indicator.ts:105
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: src/lib/ui/indicator.ts:178
+#: src/lib/ui/indicator.ts:190
 #, javascript-format
 msgid "%d File"
 msgid_plural "%d Files"

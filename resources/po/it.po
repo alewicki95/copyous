@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-16 22:30+0000\n"
+"POT-Creation-Date: 2026-04-16 22:41+0000\n"
 "PO-Revision-Date: 2025-12-14 10:45+0100\n"
 "Last-Translator: Fabian Esposito <fabian.esposito@outlook.com>\n"
 "Language-Team: Italiano\n"
@@ -215,7 +215,7 @@ msgstr "Seleziona quali tipi sono consentiti"
 #: src/lib/preferences/dependencies/dependencies.ts:222
 #: src/lib/preferences/general/appExclusionSettings.ts:169
 #: src/lib/preferences/shortcuts/shortcutRow.ts:131
-#: src/lib/ui/components/editDialog.ts:306 src/lib/ui/indicator.ts:45
+#: src/lib/ui/components/editDialog.ts:306 src/lib/ui/indicator.ts:46
 msgid "Cancel"
 msgstr "Annulla"
 
@@ -1500,7 +1500,7 @@ msgstr ""
 
 #: src/lib/preferences/general/historySettings.ts:136
 #: src/lib/ui/clipboardDialog.ts:137 src/lib/ui/clipboardDialog.ts:242
-#: src/lib/ui/indicator.ts:52
+#: src/lib/ui/indicator.ts:53
 msgid "Clear"
 msgstr "Cancella"
 
@@ -1774,31 +1774,31 @@ msgstr "Modifica elemento degli appunti"
 msgid "Close"
 msgstr "Chiudi"
 
-#: src/lib/ui/indicator.ts:36
+#: src/lib/ui/indicator.ts:37
 msgid "Clear Clipboard History?"
 msgstr "Cancellare la cronologia degli appunti?"
 
-#: src/lib/ui/indicator.ts:37
+#: src/lib/ui/indicator.ts:38
 msgid "Are you sure you want to clear your clipboard history?"
 msgstr "Sei sicuro di voler cancellare la cronologia dei tuoi appunti?"
 
-#: src/lib/ui/indicator.ts:41
+#: src/lib/ui/indicator.ts:42
 msgid "Clear Pinned/Tagged Items"
 msgstr "Cancella elementi fissati/contrassegnati"
 
-#: src/lib/ui/indicator.ts:99
+#: src/lib/ui/indicator.ts:101
 msgid "Incognito Mode"
 msgstr "Modalità Incognito"
 
-#: src/lib/ui/indicator.ts:102
+#: src/lib/ui/indicator.ts:104
 msgid "Clear History"
 msgstr "Cancella la cronologia"
 
-#: src/lib/ui/indicator.ts:103
+#: src/lib/ui/indicator.ts:105
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: src/lib/ui/indicator.ts:178
+#: src/lib/ui/indicator.ts:190
 #, javascript-format
 msgid "%d File"
 msgid_plural "%d Files"

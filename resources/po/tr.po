@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-16 22:30+0000\n"
+"POT-Creation-Date: 2026-04-16 22:41+0000\n"
 "PO-Revision-Date: 2026-03-18 07:29+0300\n"
 "Last-Translator: Muha Aliss <muhaaliss@pm.me>\n"
 "Language-Team: Turkish\n"
@@ -217,7 +217,7 @@ msgstr "Hangi türlere izin verileceğini seç"
 #: src/lib/preferences/dependencies/dependencies.ts:222
 #: src/lib/preferences/general/appExclusionSettings.ts:169
 #: src/lib/preferences/shortcuts/shortcutRow.ts:131
-#: src/lib/ui/components/editDialog.ts:306 src/lib/ui/indicator.ts:45
+#: src/lib/ui/components/editDialog.ts:306 src/lib/ui/indicator.ts:46
 msgid "Cancel"
 msgstr "İptal"
 
@@ -1484,7 +1484,7 @@ msgstr ""
 
 #: src/lib/preferences/general/historySettings.ts:136
 #: src/lib/ui/clipboardDialog.ts:137 src/lib/ui/clipboardDialog.ts:242
-#: src/lib/ui/indicator.ts:52
+#: src/lib/ui/indicator.ts:53
 msgid "Clear"
 msgstr "Temizle"
 
@@ -1756,31 +1756,31 @@ msgstr "Pano Öğesini Düzenle"
 msgid "Close"
 msgstr "Kapat"
 
-#: src/lib/ui/indicator.ts:36
+#: src/lib/ui/indicator.ts:37
 msgid "Clear Clipboard History?"
 msgstr "Pano Geçmişi Temizlensin mi?"
 
-#: src/lib/ui/indicator.ts:37
+#: src/lib/ui/indicator.ts:38
 msgid "Are you sure you want to clear your clipboard history?"
 msgstr "Pano geçmişinizi temizlemek istediğinden emin misin?"
 
-#: src/lib/ui/indicator.ts:41
+#: src/lib/ui/indicator.ts:42
 msgid "Clear Pinned/Tagged Items"
 msgstr "İğnelenen/Etiketlenen Öğeleri Temizle"
 
-#: src/lib/ui/indicator.ts:99
+#: src/lib/ui/indicator.ts:101
 msgid "Incognito Mode"
 msgstr "Gizli Mod"
 
-#: src/lib/ui/indicator.ts:102
+#: src/lib/ui/indicator.ts:104
 msgid "Clear History"
 msgstr "Geçmişi Temizle"
 
-#: src/lib/ui/indicator.ts:103
+#: src/lib/ui/indicator.ts:105
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: src/lib/ui/indicator.ts:178
+#: src/lib/ui/indicator.ts:190
 #, javascript-format
 msgid "%d File"
 msgid_plural "%d Files"
