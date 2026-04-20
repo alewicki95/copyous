@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-18 14:08+0000\n"
+"POT-Creation-Date: 2026-04-20 15:54+0000\n"
 "PO-Revision-Date: 2026-03-18 07:29+0300\n"
 "Last-Translator: Muha Aliss <muhaaliss@pm.me>\n"
 "Language-Team: Turkish\n"
@@ -19,51 +19,51 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Gtranslator 49.0\n"
 
-#: src/lib/common/actions.ts:180
+#: src/lib/common/actions.ts:182
 msgid "Open"
 msgstr "Aç"
 
-#: src/lib/common/actions.ts:185
+#: src/lib/common/actions.ts:187
 msgid "Open with Default"
 msgstr "Varsayılan ile Aç"
 
-#: src/lib/common/actions.ts:195
+#: src/lib/common/actions.ts:197
 msgid "Open with Files"
 msgstr "Dosyalar ile Aç"
 
-#: src/lib/common/actions.ts:205
+#: src/lib/common/actions.ts:207
 msgid "Open with Browser"
 msgstr "Tarayıcı ile Aç"
 
-#: src/lib/common/actions.ts:217
+#: src/lib/common/actions.ts:219
 msgid "Paste as Path"
 msgstr "Yol Olarak Yapıştır"
 
-#: src/lib/common/actions.ts:225
+#: src/lib/common/actions.ts:227
 msgid "Convert"
 msgstr "Dönüştür"
 
-#: src/lib/common/actions.ts:227
+#: src/lib/common/actions.ts:229
 #: src/lib/preferences/actions/actionDialog.ts:533
 msgid "Rgb"
 msgstr "Rgb"
 
-#: src/lib/common/actions.ts:228
+#: src/lib/common/actions.ts:230
 #: src/lib/preferences/actions/actionDialog.ts:534
 msgid "Hex"
 msgstr "Hex"
 
-#: src/lib/common/actions.ts:229
+#: src/lib/common/actions.ts:231
 #: src/lib/preferences/actions/actionDialog.ts:535
 msgid "Hsl"
 msgstr "Hsl"
 
-#: src/lib/common/actions.ts:236
+#: src/lib/common/actions.ts:238
 #: src/lib/preferences/actions/actionDialog.ts:542
 msgid "Oklch"
 msgstr "Oklch"
 
-#: src/lib/common/actions.ts:242
+#: src/lib/common/actions.ts:244
 #: src/lib/preferences/actions/actionDialog.ts:257
 msgid "QR Code"
 msgstr "QR Kodu"
@@ -133,7 +133,7 @@ msgstr "Hiçbiri"
 
 #: src/lib/preferences/actions/actionDefaults.ts:113
 #: src/lib/preferences/actions/actionDefaults.ts:128
-#: src/lib/preferences/actions/actionsPage.ts:75
+#: src/lib/preferences/actions/actionsPage.ts:69
 msgid "Default Actions"
 msgstr "Varsayılan Eylemler"
 
@@ -211,8 +211,8 @@ msgstr "Hangi türlere izin verileceğini seç"
 #: src/lib/preferences/actions/actionDialog.ts:234
 #: src/lib/preferences/actions/actionSubMenuDialog.ts:34
 #: src/lib/preferences/actions/actionsGroup.ts:33
-#: src/lib/preferences/actions/actionsPage.ts:28
-#: src/lib/preferences/actions/actionsPage.ts:41
+#: src/lib/preferences/actions/actionsPage.ts:21
+#: src/lib/preferences/actions/actionsPage.ts:34
 #: src/lib/preferences/customization/items/exclusions.ts:90
 #: src/lib/preferences/dependencies/dependencies.ts:224
 #: src/lib/preferences/general/appExclusionSettings.ts:171
@@ -391,36 +391,36 @@ msgid "Delete Action?"
 msgstr "Eylem Silinsin mi?"
 
 #: src/lib/preferences/actions/actionsGroup.ts:518
-#: src/lib/preferences/actions/actionsPage.ts:63
+#: src/lib/preferences/actions/actionsPage.ts:57
 msgid "Actions"
 msgstr "Eylemler"
 
-#: src/lib/preferences/actions/actionsPage.ts:29
+#: src/lib/preferences/actions/actionsPage.ts:22
 msgid "Reset"
 msgstr "Sıfırla"
 
-#: src/lib/preferences/actions/actionsPage.ts:42
+#: src/lib/preferences/actions/actionsPage.ts:35
 msgid "Restore"
 msgstr "Geri Yükle"
 
-#: src/lib/preferences/actions/actionsPage.ts:76
+#: src/lib/preferences/actions/actionsPage.ts:70
 msgid "Set default actions that trigger when holding control"
 msgstr ""
 "Kontrol tuşuna basılı tutulduğunda tetiklenen varsayılan eylemleri ayarla"
 
-#: src/lib/preferences/actions/actionsPage.ts:93
+#: src/lib/preferences/actions/actionsPage.ts:87
 msgid "Restore Built-In Actions"
 msgstr "Yerleşik Eylemleri Geri Yükle"
 
-#: src/lib/preferences/actions/actionsPage.ts:102
+#: src/lib/preferences/actions/actionsPage.ts:96
 msgid "Reset Actions"
 msgstr "Eylemleri Sıfırla"
 
-#: src/lib/preferences/actions/actionsPage.ts:122
+#: src/lib/preferences/actions/actionsPage.ts:116
 msgid "Restore Built-In Actions?"
 msgstr "Yerleşik Eylemler Geri Yüklensin mi?"
 
-#: src/lib/preferences/actions/actionsPage.ts:124
+#: src/lib/preferences/actions/actionsPage.ts:118
 msgid ""
 "Restoring the built-in actions will restore built-in actions that were "
 "removed. Custom actions will remain unchanged"
@@ -428,11 +428,11 @@ msgstr ""
 "Yerleşik eylemleri geri yüklemek, kaldırılan yerleşik eylemleri geri "
 "getirecektir. Özel eylemler değişmeden kalacaktır"
 
-#: src/lib/preferences/actions/actionsPage.ts:141
+#: src/lib/preferences/actions/actionsPage.ts:135
 msgid "Reset Actions?"
 msgstr "Eylemler Sıfırlansın mı?"
 
-#: src/lib/preferences/actions/actionsPage.ts:142
+#: src/lib/preferences/actions/actionsPage.ts:136
 msgid "Resetting the actions will delete all custom actions"
 msgstr "Eylemleri sıfırlamak tüm özel eylemleri silecektir."
 
@@ -1861,15 +1861,15 @@ msgstr "Re__nk"
 msgid "Type to search"
 msgstr "Aramak için yaz"
 
-#: src/prefs.ts:74
+#: src/prefs.ts:75
 msgid "General"
 msgstr "Genel"
 
-#: src/prefs.ts:94
+#: src/prefs.ts:95
 msgid "Customization"
 msgstr "Özelleştirme"
 
-#: src/prefs.ts:111
+#: src/prefs.ts:112
 msgid "Shortcuts"
 msgstr "Kısayollar"
 

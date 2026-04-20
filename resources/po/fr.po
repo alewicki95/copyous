@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-18 14:08+0000\n"
+"POT-Creation-Date: 2026-04-20 15:54+0000\n"
 "PO-Revision-Date: 2025-12-06 04:59+0100\n"
 "Last-Translator: Axel Haustant <noirbizarre@gmail.com>\n"
 "Language-Team: \n"
@@ -19,51 +19,51 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 3.8\n"
 
-#: src/lib/common/actions.ts:180
+#: src/lib/common/actions.ts:182
 msgid "Open"
 msgstr "Ouvrir"
 
-#: src/lib/common/actions.ts:185
+#: src/lib/common/actions.ts:187
 msgid "Open with Default"
 msgstr "Ouvrir avec l'application par défaut"
 
-#: src/lib/common/actions.ts:195
+#: src/lib/common/actions.ts:197
 msgid "Open with Files"
 msgstr "Ouvrir avec Fichiers"
 
-#: src/lib/common/actions.ts:205
+#: src/lib/common/actions.ts:207
 msgid "Open with Browser"
 msgstr "Ouvrir avec le navigateur"
 
-#: src/lib/common/actions.ts:217
+#: src/lib/common/actions.ts:219
 msgid "Paste as Path"
 msgstr "Coller comme chemin"
 
-#: src/lib/common/actions.ts:225
+#: src/lib/common/actions.ts:227
 msgid "Convert"
 msgstr "Convertir"
 
-#: src/lib/common/actions.ts:227
+#: src/lib/common/actions.ts:229
 #: src/lib/preferences/actions/actionDialog.ts:533
 msgid "Rgb"
 msgstr "RVB"
 
-#: src/lib/common/actions.ts:228
+#: src/lib/common/actions.ts:230
 #: src/lib/preferences/actions/actionDialog.ts:534
 msgid "Hex"
 msgstr "Hex"
 
-#: src/lib/common/actions.ts:229
+#: src/lib/common/actions.ts:231
 #: src/lib/preferences/actions/actionDialog.ts:535
 msgid "Hsl"
 msgstr "TSL"
 
-#: src/lib/common/actions.ts:236
+#: src/lib/common/actions.ts:238
 #: src/lib/preferences/actions/actionDialog.ts:542
 msgid "Oklch"
 msgstr "Oklch"
 
-#: src/lib/common/actions.ts:242
+#: src/lib/common/actions.ts:244
 #: src/lib/preferences/actions/actionDialog.ts:257
 msgid "QR Code"
 msgstr "Code QR"
@@ -133,7 +133,7 @@ msgstr "Aucun"
 
 #: src/lib/preferences/actions/actionDefaults.ts:113
 #: src/lib/preferences/actions/actionDefaults.ts:128
-#: src/lib/preferences/actions/actionsPage.ts:75
+#: src/lib/preferences/actions/actionsPage.ts:69
 msgid "Default Actions"
 msgstr "Actions par défaut"
 
@@ -211,8 +211,8 @@ msgstr "Sélectionnez les types autorisés"
 #: src/lib/preferences/actions/actionDialog.ts:234
 #: src/lib/preferences/actions/actionSubMenuDialog.ts:34
 #: src/lib/preferences/actions/actionsGroup.ts:33
-#: src/lib/preferences/actions/actionsPage.ts:28
-#: src/lib/preferences/actions/actionsPage.ts:41
+#: src/lib/preferences/actions/actionsPage.ts:21
+#: src/lib/preferences/actions/actionsPage.ts:34
 #: src/lib/preferences/customization/items/exclusions.ts:90
 #: src/lib/preferences/dependencies/dependencies.ts:224
 #: src/lib/preferences/general/appExclusionSettings.ts:171
@@ -393,37 +393,37 @@ msgid "Delete Action?"
 msgstr "Supprimer l'action ?"
 
 #: src/lib/preferences/actions/actionsGroup.ts:518
-#: src/lib/preferences/actions/actionsPage.ts:63
+#: src/lib/preferences/actions/actionsPage.ts:57
 msgid "Actions"
 msgstr "Actions"
 
-#: src/lib/preferences/actions/actionsPage.ts:29
+#: src/lib/preferences/actions/actionsPage.ts:22
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: src/lib/preferences/actions/actionsPage.ts:42
+#: src/lib/preferences/actions/actionsPage.ts:35
 msgid "Restore"
 msgstr "Restaurer"
 
-#: src/lib/preferences/actions/actionsPage.ts:76
+#: src/lib/preferences/actions/actionsPage.ts:70
 msgid "Set default actions that trigger when holding control"
 msgstr ""
 "Définir les actions par défaut qui se déclenchent lorsque la touche Ctrl est "
 "maintenue"
 
-#: src/lib/preferences/actions/actionsPage.ts:93
+#: src/lib/preferences/actions/actionsPage.ts:87
 msgid "Restore Built-In Actions"
 msgstr "Restaurer les actions intégrées"
 
-#: src/lib/preferences/actions/actionsPage.ts:102
+#: src/lib/preferences/actions/actionsPage.ts:96
 msgid "Reset Actions"
 msgstr "Réinitialiser les actions"
 
-#: src/lib/preferences/actions/actionsPage.ts:122
+#: src/lib/preferences/actions/actionsPage.ts:116
 msgid "Restore Built-In Actions?"
 msgstr "Restaurer les actions intégrées ?"
 
-#: src/lib/preferences/actions/actionsPage.ts:124
+#: src/lib/preferences/actions/actionsPage.ts:118
 msgid ""
 "Restoring the built-in actions will restore built-in actions that were "
 "removed. Custom actions will remain unchanged"
@@ -431,11 +431,11 @@ msgstr ""
 "La restauration des actions intégrées restaurera les actions intégrées qui "
 "ont été supprimées. Les actions personnalisées resteront inchangées"
 
-#: src/lib/preferences/actions/actionsPage.ts:141
+#: src/lib/preferences/actions/actionsPage.ts:135
 msgid "Reset Actions?"
 msgstr "Réinitialiser les actions ?"
 
-#: src/lib/preferences/actions/actionsPage.ts:142
+#: src/lib/preferences/actions/actionsPage.ts:136
 msgid "Resetting the actions will delete all custom actions"
 msgstr ""
 "La réinitialisation des actions supprimera toutes les actions personnalisées"
@@ -1889,15 +1889,15 @@ msgstr "Couleu__r"
 msgid "Type to search"
 msgstr "Tapez pour rechercher"
 
-#: src/prefs.ts:74
+#: src/prefs.ts:75
 msgid "General"
 msgstr "Général"
 
-#: src/prefs.ts:94
+#: src/prefs.ts:95
 msgid "Customization"
 msgstr "Personnalisation"
 
-#: src/prefs.ts:111
+#: src/prefs.ts:112
 msgid "Shortcuts"
 msgstr "Raccourcis"
 
