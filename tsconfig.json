@@ -11,9 +11,13 @@
 		"target": "ES2024",
 		"lib": ["ES2024"],
 		"experimentalDecorators": true,
+		"importHelpers": true,
 		"exactOptionalPropertyTypes": true,
 		"noFallthroughCasesInSwitch": false,
 		"types": [],
+		"paths": {
+			"tslib": ["./src/thirdparty/tslib.js"]
+		}
 	},
 	"include": [
 		"src",

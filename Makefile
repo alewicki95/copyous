@@ -107,7 +107,7 @@ check-po:
 # Copy metadata
 VERSION ?= $(shell git describe --tags --dirty | sed -E 's/^v//;s/-g([0-9a-f]{7})/+\1/')
 BRANCH := $(shell git rev-parse --abbrev-ref HEAD 2>/dev/null)
-ifneq ($(filter main master,$(BRANCH)),$(BRANCH))
+ifneq ($(filter main master HEAD,$(BRANCH)),$(BRANCH))
 VERSION := $(VERSION).$(subst /,-,$(BRANCH))
 endif
 
@@ -118,6 +118,7 @@ $(DIST_DIR)/metadata.json: resources/metadata.json | $(DIST_DIR)
 $(DIST_DIR)/extension.js: $(SRC) tsconfig.json | $(DIST_DIR)
 ifeq ($(RELEASE),1)
 	pnpm exec tsc
+	pnpm exec tsc-alias
 	@touch $@
 # Remove code blocks commented with /* DEBUG-ONLY */ or lines ending with // DEBUG-ONLY
 	find $(@D) -name '*.js' -exec perl -0777 -i -pe 's/^(\s*)\/\* DEBUG-ONLY \*\/(?:.|\n)*?^\1\}|\/\/ DEBUG-ONLY.*\n.*$$//gm' {} \;
@@ -126,6 +127,7 @@ ifeq ($(RELEASE),1)
 	pnpm exec prettier $(DIST_DIR) --ignore-path= --log-level=warn --write --cache --cache-location=$(DIST_DIR)/.prettiercache
 else
 	pnpm exec tsc --sourceMap --sourceRoot src
+	pnpm exec tsc-alias
 	@touch $@
 # Move source maps to subdirectory
 	rsync -rv --include '*/' --exclude 'sourcemaps/**' --include '*.js.map' --exclude '*' --prune-empty-dirs --remove-source-files dist/ dist/sourcemaps/
