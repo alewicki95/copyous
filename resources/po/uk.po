@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-12 23:52+0000\n"
+"POT-Creation-Date: 2026-10-18 17:07+0000\n"
 "PO-Revision-Date: 2026-09-25 12:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
@@ -1814,7 +1814,7 @@ msgstr "Очистити історію"
 msgid "Settings"
 msgstr "Налаштування"
 
-#: src/lib/ui/indicator.ts:199
+#: src/lib/ui/indicator.ts:195
 #, javascript-format
 msgid "%d File"
 msgid_plural "%d Files"

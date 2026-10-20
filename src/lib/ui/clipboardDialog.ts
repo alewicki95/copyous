@@ -431,7 +431,7 @@ export class ClipboardDialog extends St.Widget {
 		const grabFailed =
 			VERSION >= 50
 				? (grab as Clutter.Grab & { is_revoked(): boolean }).is_revoked()
-				: (grab as Clutter.Grab & { get_seat_state(): number }).get_seat_state() !== 1; // Clutter.GrabState.ALL
+				: (grab as Clutter.Grab & { get_seat_state(): number }).get_seat_state() !== 3; // Clutter.GrabState.ALL
 		if (grabFailed) {
 			Main.popModal(grab);
 			return;
@@ -807,7 +807,8 @@ export class ClipboardDialog extends St.Widget {
 		}
 
 		// Navigate
-		if (global.focus_manager.navigate_from_event) {
+		// St.FocusManager.navigate_from_event was removed from St in GNOME 51
+		if (VERSION < 51 && global.focus_manager.navigate_from_event) {
 			if (global.focus_manager.navigate_from_event(event)) return Clutter.EVENT_STOP;
 		} else {
 			let direction: St.DirectionType | undefined;

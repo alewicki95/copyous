@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Copyous\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-12 23:52+0000\n"
+"POT-Creation-Date: 2026-10-18 17:07+0000\n"
 "PO-Revision-Date: 2026-03-18 07:29+0300\n"
 "Last-Translator: Muha Aliss <muhaaliss@pm.me>\n"
 "Language-Team: Turkish\n"
@@ -1805,7 +1805,7 @@ msgstr "Geçmişi Temizle"
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: src/lib/ui/indicator.ts:199
+#: src/lib/ui/indicator.ts:195
 #, javascript-format
 msgid "%d File"
 msgid_plural "%d Files"
